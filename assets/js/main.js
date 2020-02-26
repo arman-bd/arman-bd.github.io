@@ -87,20 +87,37 @@
         return false;
       });
 
-    $("html").easeScroll({
-      frameRate: 60,
-      animationTime: 900,
-      stepSize: 90,
-      pulseAlgorithm: 1,
-      pulseScale: 4,
-      pulseNormalize: 1,
-      accelerationDelta: 16,
-      accelerationMax: 1,
-      keyboardSupport: true,
-      arrowScroll: 60,
-      touchpadSupport: true,
-      fixedBackground: true
-    });
+    // $("html").easeScroll({
+    //   frameRate: 160,
+    //   animationTime: 900,
+    //   stepSize: 150,
+    //   pulseAlgorithm: 1,
+    //   pulseScale: 4,
+    //   pulseNormalize: 1,
+    //   accelerationDelta: 40,
+    //   accelerationMax: 1,
+    //   keyboardSupport: true,
+    //   arrowScroll: 60,
+    //   touchpadSupport: true,
+    //   fixedBackground: true
+    // });
+    // $("html").easeScroll();
+
+    $(this).impulse();
+
+    // Parallax
+    setTimeout(function(){
+      
+      new Parallax(document.getElementsByClassName('social-parallax')[0]);
+      new Parallax(document.getElementsByClassName('social-parallax')[1]);
+      new Parallax(document.getElementsByClassName('about-parallax')[0]);
+      new Parallax(document.getElementsByClassName('jobs-parallax')[0]);
+
+
+      
+    }, 500)
+
+
 
   });      
 

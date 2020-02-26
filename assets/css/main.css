@@ -213,7 +213,7 @@ button:focus {
 }
 
 .hover-bgx {
-  margin-top: -100px;
+  margin-top: -120px;
   position: absolute;
   text-align: center;
   width: 95%;
@@ -232,7 +232,8 @@ button:focus {
 
 .hover-bgx .hover-text small {
 	color: #444;
-	font-size: 16px;
+  font-size: 16px;
+  padding: 8px;
 }
 
 
