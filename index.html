@@ -28,8 +28,24 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
+    <style>
+      .preloader {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 9999;
+          background-image: url('assets/img/loading.gif');
+          background-repeat: no-repeat; 
+          background-color: #FFF;
+          background-position: center;
+      }
+    </style>
   </head>
   <body>
+
+    <div class="preloader"></div>
 
     <!-- Header Area wrapper Starts -->
     <header id="header-wrap">

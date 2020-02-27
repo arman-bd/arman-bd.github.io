@@ -3,6 +3,8 @@
   "use strict";  
 
   $(window).on('load', function() {
+    // Hide Preloader
+    $('.preloader').fadeOut('slow');
 
     /* 
    MixitUp
