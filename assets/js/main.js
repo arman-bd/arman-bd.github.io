@@ -4,7 +4,12 @@
 
   $(window).on('load', function() {
     // Hide Preloader
-    $('.preloader').fadeOut('slow');
+    //setTimeout(function(){
+      $('.preloader').fadeOut('slow');
+      $('.full-content').css("display", "");
+      //$('.full-content').fadeIn("slow");
+    //}, 2000);
+    
 
     /* 
    MixitUp
