@@ -53,18 +53,52 @@
           width: 100%;
           height: 100%;
           z-index: 9999;
-          background-image: url('assets/img/loading.gif');
           background-repeat: no-repeat; 
           background-color: #FFF;
           background-position: center;
           overflow-x: hidden;
           overflow-y: hidden;
+
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      .lds-dual-ring {
+        display: inline-block;
+        width: 160px;
+        height: 160px;
+      }
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 128px;
+        height: 128px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #afb4e0;
+        border-color: #afb4e0 transparent #afb4e0 transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+      }
+      @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     </style>
   </head>
   <body>
 
-    <div class="preloader"></div>
+    <div class="preloader">
+      <center>
+        <br><br><br>
+        <br><br><br>
+        <div class="lds-dual-ring"></div>
+      </center>
+    </div>
     <div class="full-content" style="display: none;">
 
     <!-- Header Area wrapper Starts -->

@@ -8,7 +8,7 @@
       $('.preloader').fadeOut('slow');
       $('.full-content').css("display", "");
       //$('.full-content').fadeIn("slow");
-    //}, 2000);
+    //}, 20000);
     
 
     /* 
