@@ -4117,8 +4117,10 @@ button:focus {
   position: absolute;
   text-align: center;
   width: 95%;
-  background-color: #FFFFFFDD;
+  background-color: rgba(255, 255, 255, 0.75);
 }
+
+
 
 .hover-text {
   padding-top: 8px;
@@ -5190,3 +5192,31 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
     transform: rotate(360deg);
   }
 }
+
+
+/* ------------------------------------- */
+
+.services-item {
+    height: 350px;
+}
+
+.services-item .services-content h3 a {
+    font-size: 14px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .hover-bgx {
+        width: 19vw;
+    }
+    .portfolio-item {
+        width: 20vw;
+    }
+    #portfolio {
+        display: table-cell;
+    }
+    .portfolio-item {
+        padding: 10px 10px 10px 10px
+    }
+
+    
+ }
