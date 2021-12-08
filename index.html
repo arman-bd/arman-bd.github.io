@@ -6212,7 +6212,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
     <!-- Portfolio Section Ends --> 
 
     <!-- Blog Section Start -->
-    <!--
+
     <section id="blog" class="section-padding">
       <h2 class="section-title wow flipInX" data-wow-delay="0.4s">Recent Blog Posts</h2>
       <div class="container">
@@ -6220,25 +6220,14 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 
             <div class="footer-right-area wow fadeIn">
               <div id="medium-widget"></div>
-              <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-              <script>
-                MediumWidget.Init(
-                  {renderTo: '#medium-widget', params: 
-                    {
-                    "resource":"https://medium.com/@arman.bd",
-                    "postsPerLine":1,"limit":4,"picture":"small",
-                    "fields": ["description","author","claps","likes"],
-                    "ratio":"original"
-                    }
-                });
-              </script>
+    	      <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+    	      <script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/@arman-bd","postsPerLine":1,"limit":5,"picture":"big","fields":["description","author","claps","likes"],"ratio":"original"}})</script>
               <br/><br/>
             </div>
 
         </div>
       </div>
     </section>
-    !-->
 
     <!-- Counter Area Start-->
     <section class="counter-section section-padding">
