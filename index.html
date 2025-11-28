@@ -3,80 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arman Hossain - Web Scraping & Data Extraction</title>
+<meta name="robots" content="noindex,nofollow">
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4ac04526-55c2-48ae-8949-5cd65181fe07" data-blockingmode="auto" type="text/javascript"></script>
+<title>Arman Hossain - Web Scraping & Data Extraction Specialist</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--card:#141414;--accent:#10b981;--text:#e5e5e5;--muted:#888;--border:#222}
-[data-theme="light"]{--bg:#f5f5f5;--card:#fff;--accent:#059669;--text:#1a1a1a;--muted:#666;--border:#ddd}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .3s,color .3s}
+:root{--bg:#0a0a0a;--card:#111;--accent:#00d4ff;--accent2:#0099cc;--text:#e5e5e5;--muted:#888;--border:#1a1a1a;--glow:rgba(0,212,255,0.1)}
+[data-theme="light"]{--bg:#f8f9fa;--card:#fff;--accent:#0077b6;--accent2:#005f8a;--text:#1a1a1a;--muted:#666;--border:#e0e0e0;--glow:rgba(0,119,182,0.08)}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
 .container{max-width:900px;margin:0 auto;padding:20px}
-header{text-align:center;padding:50px 20px;border-bottom:1px solid var(--border);position:relative}
+header{text-align:center;padding:60px 20px 50px;border-bottom:1px solid var(--border);position:relative}
 .theme-toggle{position:fixed;top:20px;right:20px;background:var(--card);border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer;font-size:1.2rem;z-index:1000}
-h1{font-size:2.4rem;margin-bottom:8px}
-.title{color:var(--accent);font-size:1.15rem;margin-bottom:8px;font-weight:600}
-.tagline{color:var(--muted);font-size:0.9rem;margin-bottom:12px;max-width:500px;margin-left:auto;margin-right:auto}
+h1{font-size:2.6rem;margin-bottom:10px;letter-spacing:-0.5px}
+.title{color:var(--accent);font-size:1.2rem;margin-bottom:10px;font-weight:600}
+.tagline{color:var(--muted);font-size:0.95rem;margin-bottom:14px;max-width:520px;margin-left:auto;margin-right:auto;font-style:italic}
 .location{color:var(--muted);font-size:0.85rem}
-.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
-.contact a{color:var(--text);text-decoration:none;font-size:0.85rem;padding:8px 16px;background:var(--card);border:1px solid var(--border);border-radius:6px;transition:all .2s}
-.contact a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-section{padding:35px 20px}
-h2{font-size:1.2rem;margin-bottom:20px;padding-bottom:6px;border-bottom:2px solid var(--accent);display:inline-block}
-.summary{color:var(--muted);font-size:0.9rem}
-.highlight{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;margin-top:20px}
-.highlight h3{color:var(--accent);margin-bottom:12px;font-size:1rem}
-.highlight ul{list-style:none;display:grid;gap:6px}
-.highlight li{padding-left:18px;position:relative;font-size:0.85rem}
-.highlight li::before{content:">";position:absolute;left:0;color:var(--accent);font-weight:bold}
-.tech-grid{display:grid;gap:16px}
-.tech-cat{background:var(--card);padding:14px;border-radius:8px;border:1px solid var(--border)}
-.tech-cat h4{color:var(--accent);font-size:0.85rem;margin-bottom:10px}
-.tech-cat p{font-size:0.8rem;color:var(--muted)}
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.project{background:var(--card);padding:16px;border-radius:8px;border:1px solid var(--border);text-decoration:none;display:block;transition:all .2s}
-.project:hover{border-color:var(--accent);transform:translateY(-2px)}
-.project-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.project h4{color:var(--accent);font-size:0.95rem}
+.contact{display:flex;justify-content:center;gap:10px;margin-top:24px;flex-wrap:nowrap}
+.contact a{color:var(--text);text-decoration:none;font-size:0.8rem;padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:6px;transition:all .2s;white-space:nowrap}
+.contact a:hover{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 0 20px var(--glow)}
+section{padding:45px 20px}
+h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:inline-block}
+.summary{color:var(--muted);font-size:0.95rem;line-height:1.8}
+.story{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;margin-top:20px}
+.story-text{color:var(--muted);font-size:0.9rem;line-height:1.9;margin-bottom:16px}
+.story-text:last-child{margin-bottom:0}
+.story-highlight{color:var(--accent);font-weight:600}
+.story-year{display:inline-block;background:var(--accent);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.75rem;font-weight:700;margin-right:6px}
+[data-theme="light"] .story-year{background:#0077b6;color:#fff}
+.highlight{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-top:20px}
+.highlight h3{color:var(--accent);margin-bottom:14px;font-size:1.05rem}
+.highlight ul{list-style:none;display:grid;gap:8px}
+.highlight li{padding-left:20px;position:relative;font-size:0.9rem}
+.highlight li::before{content:"›";position:absolute;left:0;color:var(--accent);font-weight:bold;font-size:1.1rem}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.tech-cat{background:var(--card);padding:18px;border-radius:10px;border:1px solid var(--border);transition:all .2s}
+.tech-cat:hover{border-color:var(--accent);box-shadow:0 0 20px var(--glow)}
+.tech-cat h4{color:var(--accent);font-size:0.85rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px}
+.tech-cat p{font-size:0.85rem;color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.project{background:var(--card);padding:20px;border-radius:10px;border:1px solid var(--border);text-decoration:none;display:block;transition:all .2s}
+.project:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px var(--glow)}
+.project-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.project h4{color:var(--accent);font-size:1rem}
 .project-stars{color:var(--muted);font-size:0.75rem}
-.project p{font-size:0.82rem;color:var(--muted);margin-bottom:10px}
-.project-tech{display:flex;flex-wrap:wrap;gap:5px}
-.project-tech span{background:var(--bg);padding:2px 8px;border-radius:4px;font-size:0.7rem;color:var(--muted)}
+.project p{font-size:0.85rem;color:var(--muted);margin-bottom:12px;line-height:1.6}
+.project-context{font-size:0.8rem;color:var(--text);margin-bottom:12px;padding:10px;background:var(--bg);border-radius:6px;border-left:3px solid var(--accent)}
+.project-tech{display:flex;flex-wrap:wrap;gap:6px}
+.project-tech span{background:var(--bg);padding:4px 10px;border-radius:4px;font-size:0.7rem;color:var(--muted)}
 .featured{border-color:var(--accent);border-width:2px}
-.exp-item{background:var(--card);padding:16px;border-radius:8px;margin-bottom:12px;border:1px solid var(--border);border-left:3px solid var(--accent)}
-.exp-header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:6px}
-.exp-company{font-weight:600;font-size:1rem}
+.exp-item{background:var(--card);padding:20px;border-radius:10px;margin-bottom:14px;border:1px solid var(--border);border-left:4px solid var(--accent);transition:all .2s}
+.exp-item:hover{box-shadow:0 4px 20px var(--glow)}
+.exp-header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.exp-company{font-weight:700;font-size:1.05rem}
 .exp-date{color:var(--muted);font-size:0.8rem}
-.exp-role{color:var(--accent);font-size:0.9rem;margin-bottom:4px}
+.exp-role{color:var(--accent);font-size:0.95rem;margin-bottom:6px;font-weight:500}
 .exp-loc{color:var(--muted);font-size:0.75rem}
-.exp-desc{font-size:0.85rem;color:var(--muted);margin-top:10px}
-.exp-tech{margin-top:10px;display:flex;flex-wrap:wrap;gap:5px}
-.exp-tech span{background:var(--bg);padding:2px 8px;border-radius:4px;font-size:0.7rem;color:var(--muted)}
-.edu-item{background:var(--card);padding:14px;border-radius:8px;margin-bottom:10px;border:1px solid var(--border)}
-.edu-school{font-weight:600;font-size:0.95rem}
-.edu-deg{color:var(--accent);font-size:0.85rem}
+.exp-desc{font-size:0.88rem;color:var(--muted);margin-top:12px;line-height:1.7}
+.exp-tech{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.exp-tech span{background:var(--bg);padding:4px 10px;border-radius:4px;font-size:0.7rem;color:var(--muted)}
+.edu-item{background:var(--card);padding:16px;border-radius:10px;margin-bottom:12px;border:1px solid var(--border)}
+.edu-school{font-weight:600;font-size:1rem}
+.edu-deg{color:var(--accent);font-size:0.9rem}
 .edu-year{color:var(--muted);font-size:0.75rem}
 .cli-box{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;max-width:950px;margin:0 auto}
-.cli-header{display:flex;align-items:center;padding:10px 14px;background:var(--border);border-bottom:1px solid var(--border)}
+.cli-header{display:flex;align-items:center;padding:12px 16px;background:var(--border);border-bottom:1px solid var(--border)}
 .cli-dots{display:flex;gap:6px}
 .cli-dots span{width:12px;height:12px;border-radius:50%;background:#ff5f56}
 .cli-dots span:nth-child(2){background:#ffbd2e}
 .cli-dots span:nth-child(3){background:#27ca40}
 .cli-title{flex:1;text-align:center;font-size:0.75rem;color:var(--muted)}
-.cli-copy{background:var(--accent);color:#fff;border:none;padding:5px 12px;border-radius:5px;font-size:0.7rem;cursor:pointer;transition:all .2s}
+.cli-copy{background:var(--accent);color:#000;border:none;padding:6px 14px;border-radius:5px;font-size:0.7rem;cursor:pointer;transition:all .2s;font-weight:600}
 .cli-copy:hover{opacity:0.85;transform:scale(1.02)}
 .cli-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--card)}
-.cli-tab{padding:10px 20px;font-size:0.8rem;color:var(--muted);cursor:pointer;border:none;background:transparent;transition:all .2s;border-bottom:2px solid transparent}
+.cli-tab{padding:12px 22px;font-size:0.8rem;color:var(--muted);cursor:pointer;border:none;background:transparent;transition:all .2s;border-bottom:2px solid transparent}
 .cli-tab:hover{color:var(--text);background:var(--bg)}
 .cli-tab.active{color:var(--accent);border-bottom-color:var(--accent);background:var(--bg)}
-.cli-intro{padding:0 0 16px;font-size:0.9rem;color:var(--muted)}
-.cli-code{margin:0;padding:16px;background:var(--bg);font-size:0.65rem;overflow-x:auto;color:var(--accent);line-height:1.4;display:none}
+.cli-intro{padding:0 0 18px;font-size:0.95rem;color:var(--muted)}
+.cli-code{margin:0;padding:18px;background:var(--bg);font-size:0.65rem;overflow-x:auto;line-height:1.5;display:none}
 .cli-code.active{display:block}
-footer{text-align:center;padding:25px;color:var(--muted);font-size:0.75rem;border-top:1px solid var(--border)}
+.cli-code code{color:var(--text);font-family:'SF Mono',Monaco,Consolas,monospace}
+.token.comment,.token.prolog{color:#6a737d}
+.token.keyword,.token.selector,.token.important{color:#ff7b72}
+.token.string,.token.attr-value{color:#a5d6ff}
+.token.function,.token.attr-name{color:#d2a8ff}
+.token.number,.token.boolean{color:#79c0ff}
+.token.operator,.token.punctuation{color:#8b949e}
+.token.variable,.token.property{color:#ffa657}
+.token.class-name,.token.constant{color:#7ee787}
+.token.builtin{color:#f0883e}
+.token.command{color:#79c0ff}
+.token.flag{color:#ffa657}
+[data-theme="light"] .token.command{color:#0550ae}
+[data-theme="light"] .token.flag{color:#953800}
+[data-theme="light"] .token.comment,[data-theme="light"] .token.prolog{color:#6a737d}
+[data-theme="light"] .token.keyword,[data-theme="light"] .token.selector{color:#cf222e}
+[data-theme="light"] .token.string,[data-theme="light"] .token.attr-value{color:#0a3069}
+[data-theme="light"] .token.function,[data-theme="light"] .token.attr-name{color:#8250df}
+[data-theme="light"] .token.number,[data-theme="light"] .token.boolean{color:#0550ae}
+[data-theme="light"] .token.operator,[data-theme="light"] .token.punctuation{color:#24292f}
+[data-theme="light"] .token.variable,[data-theme="light"] .token.property{color:#953800}
+[data-theme="light"] .token.class-name,[data-theme="light"] .token.constant{color:#116329}
+[data-theme="light"] .token.builtin{color:#cf222e}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:0.8rem;border-top:1px solid var(--border)}
 @media(max-width:600px){
-h1{font-size:1.7rem}
+h1{font-size:1.8rem}
 .theme-toggle{top:10px;right:10px;padding:6px 10px}
 .exp-header,.project-header{flex-direction:column;align-items:flex-start}
-section{padding:25px 15px}
-.contact{flex-direction:column;align-items:center}
+section{padding:30px 15px}
+.contact{gap:6px;flex-wrap:wrap}
+.contact a{padding:6px 10px;font-size:0.7rem}
+.story{padding:20px}
 }
 </style>
 </head>
@@ -85,26 +121,47 @@ section{padding:25px 15px}
 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
 <h1 data-cli="name">Arman Hossain</h1>
 <p class="title" data-cli="title">Web Scraping & Data Extraction Specialist</p>
-<p class="tagline" data-cli="tagline">If you can see it, I believe there's a way to extract it.</p>
+<p class="tagline" data-cli="tagline">"If you can see it, I believe there's a way to extract it."</p>
 <p class="location">Berlin Metropolitan Area</p>
 <div class="contact">
 <a data-cli="link" data-label="Email" href="mailto:armans.postbox@gmail.com" target="_blank" rel="noopener">Email</a>
 <a data-cli="link" data-label="LinkedIn" href="https://linkedin.com/in/armanhossain" target="_blank" rel="noopener">LinkedIn</a>
 <a data-cli="link" data-label="GitHub" href="https://github.com/arman-bd" target="_blank" rel="noopener">GitHub</a>
 <a data-cli="link" data-label="Blog" href="https://bytetunnels.com" target="_blank" rel="noopener">Blog</a>
-<a data-cli="link" data-label="Medium" href="https://arman-bd.medium.com" target="_blank" rel="noopener">Medium</a>
 </div>
 </header>
 
 <div class="container">
 <section>
-<h2 data-cli="section">What I Work On</h2>
+<h2 data-cli="section">The Origin Story</h2>
+<div class="story">
+<p class="story-text">
+<span class="story-year">2000</span> I started programming at <span class="story-highlight">age eight</span> with Visual Basic 6. Growing up in rural Bangladesh with limited internet access, I quickly realized that web scraping wasn't just a skill—it was survival. The cost of staying online was simply too high.
+</p>
+<p class="story-text">
+<span class="story-year">2004</span> I began scraping websites using VB6's MSHTML library. By downloading tutorials and forum content for offline reading, I saved enough money to keep learning. That necessity became a passion—I started exploring every tool I could find: <span class="story-highlight">CURL, WGET, sockets, browser macros, and later Selenium</span>.
+</p>
+<p class="story-text">
+<span class="story-year">2008</span> I started building mobile apps for GetJar and Nokia's Ovi Store using J2ME. By then, I was proficient in Java, PHP, and Python. The transition to Android app development soon followed.
+</p>
+<p class="story-text">
+<span class="story-year">2014</span> I built an enterprise-level search engine with a web-crawling operation that processed <span class="story-highlight">10-25 million pages daily</span>—handling 4-8 TB of data. Most of the infrastructure ran on Apache Solr, with scrapers written in Python, PHP, and C. Anti-bot detection, CAPTCHAs, rate limiting—I'd learned to work around them all.
+</p>
+<p class="story-text">
+To sum it up: <span class="story-highlight">I started programming because I wanted to scrape websites</span>. It's been about 24 years now, and I never really stopped. Web scraping and reverse engineering aren't just what I do—they're why I code.
+</p>
+</div>
+</section>
+
+<section>
+<h2 data-cli="section">What I Do</h2>
 <div class="highlight">
 <ul>
-<li data-cli="item">Web Scraping & Data Extraction</li>
+<li data-cli="item">Web Scraping & Large-Scale Data Extraction</li>
 <li data-cli="item">Browser Automation (Playwright, Puppeteer, Selenium)</li>
-<li data-cli="item">Anti-Bot Solutions & Circumvention</li>
-<li data-cli="item">Data Pipelines & Market Research</li>
+<li data-cli="item">Anti-Bot Detection & Circumvention</li>
+<li data-cli="item">API Integrations & Monitoring Systems</li>
+<li data-cli="item">Data Pipelines & ETL Architecture</li>
 </ul>
 </div>
 </section>
@@ -112,32 +169,41 @@ section{padding:25px 15px}
 <section>
 <h2 data-cli="section">Tech Stack</h2>
 <div class="tech-grid">
-<div class="tech-cat"><h4>Languages</h4><p data-cli="item">Python, JavaScript, TypeScript, Ruby</p></div>
-<div class="tech-cat"><h4>Browser Automation</h4><p data-cli="item">Playwright, Puppeteer, Selenium, Camoufox</p></div>
+<div class="tech-cat"><h4>Languages</h4><p data-cli="item">Python, JavaScript, TypeScript, Ruby, C</p></div>
+<div class="tech-cat"><h4>Automation</h4><p data-cli="item">Playwright, Puppeteer, Selenium, Camoufox, Scrapy</p></div>
 <div class="tech-cat"><h4>Backend</h4><p data-cli="item">FastAPI, Express, NestJS, Rails</p></div>
 <div class="tech-cat"><h4>Frontend</h4><p data-cli="item">Vue, React, Next.js</p></div>
-<div class="tech-cat"><h4>Databases</h4><p data-cli="item">PostgreSQL, MongoDB, Redis, Neo4j</p></div>
-<div class="tech-cat"><h4>Cloud & DevOps</h4><p data-cli="item">GCP, AWS, Azure, Docker</p></div>
+<div class="tech-cat"><h4>Databases</h4><p data-cli="item">PostgreSQL, MongoDB, Redis, Neo4j, Apache Solr</p></div>
+<div class="tech-cat"><h4>Cloud & DevOps</h4><p data-cli="item">GCP, AWS, Azure, Docker, Kubernetes</p></div>
 </div>
 </section>
 
 <section>
-<h2 data-cli="section">Open Source Projects</h2>
+<h2 data-cli="section">Open Source</h2>
 <div class="projects">
 <a class="project featured" data-cli="project" data-name="httpmorph" data-stars="100+" href="https://github.com/arman-bd/httpmorph" target="_blank" rel="noopener">
 <div class="project-header"><h4>httpmorph</h4><span class="project-stars">100+ stars</span></div>
-<p>Drop-in replacement for Python requests with perfect Chrome fingerprint matching.</p>
-<div class="project-tech"><span>Python</span><span>C</span><span>BoringSSL</span></div>
+<p>Drop-in replacement for Python requests with perfect Chrome fingerprint matching. Bypasses TLS fingerprinting used by Cloudflare and similar services.</p>
+<div class="project-context">Built to solve the growing problem of JA3/JA4 fingerprinting that was blocking legitimate automation.</div>
+<div class="project-tech"><span>Python</span><span>C</span><span>BoringSSL</span><span>TLS Fingerprinting</span></div>
 </a>
 <a class="project" data-cli="project" data-name="chromixer" data-stars="14" href="https://github.com/arman-bd/chromixer" target="_blank" rel="noopener">
 <div class="project-header"><h4>chromixer</h4><span class="project-stars">14 stars</span></div>
-<p>Chrome extension for browser fingerprint protection.</p>
-<div class="project-tech"><span>JavaScript</span><span>Chrome Extension</span></div>
+<p>Chrome extension for browser fingerprint protection and randomization.</p>
+<div class="project-context">Developed from years of studying how websites track and identify browsers.</div>
+<div class="project-tech"><span>JavaScript</span><span>Chrome Extension</span><span>Privacy</span></div>
 </a>
 <a class="project" data-cli="project" data-name="www2any" data-stars="4" href="https://github.com/arman-bd/www2any" target="_blank" rel="noopener">
 <div class="project-header"><h4>www2any</h4><span class="project-stars">4 stars</span></div>
-<p>Web scraper using OpenLLaMA to convert content into various formats.</p>
+<p>Web scraper using LLMs to intelligently convert web content into structured formats.</p>
+<div class="project-context">Exploring how AI can make data extraction more adaptive and resilient.</div>
 <div class="project-tech"><span>Python</span><span>Playwright</span><span>LLM</span></div>
+</a>
+<a class="project" data-cli="project" data-name="khudro" data-stars="18" href="https://github.com/arman-bd/khudro" target="_blank" rel="noopener">
+<div class="project-header"><h4>khudro</h4><span class="project-stars">18 stars</span></div>
+<p>Lightweight web server built from scratch in C using sockets and threads for concurrent connections.</p>
+<div class="project-context">Built to understand low-level networking—supports 400+ MIME types and configurable buffer limits.</div>
+<div class="project-tech"><span>C</span><span>Sockets</span><span>Multithreading</span></div>
 </a>
 </div>
 </section>
@@ -147,44 +213,44 @@ section{padding:25px 15px}
 <div class="exp-item" data-cli="exp" data-info="Terminal49 | Senior Integration Engineer | 2023-Present">
 <div class="exp-header"><span class="exp-company">Terminal49</span><span class="exp-date">Jan 2023 - Present</span></div>
 <div class="exp-role">Senior Integration Engineer</div>
-<div class="exp-loc">California, USA</div>
-<p class="exp-desc">Build data extraction solutions connecting shipping carriers.</p>
-<div class="exp-tech"><span>Python</span><span>Web Scraping</span><span>Anti-Bot Bypass</span></div>
+<div class="exp-loc">California, USA (Remote)</div>
+<p class="exp-desc">Building data extraction solutions that connect global shipping carriers. Working with complex integrations—scraping, APIs, and real-time monitoring systems—to aggregate container tracking data from ocean carriers, terminals, and rail providers worldwide.</p>
+<div class="exp-tech"><span>Python</span><span>Playwright</span><span>Anti-Bot Bypass</span><span>API Integration</span><span>Monitoring</span></div>
 </div>
 <div class="exp-item" data-cli="exp" data-info="HelloTask | CTO | 2022">
 <div class="exp-header"><span class="exp-company">HelloTask</span><span class="exp-date">May 2022 - Dec 2022</span></div>
 <div class="exp-role">Chief Technology Officer</div>
 <div class="exp-loc">Dhaka, Bangladesh</div>
-<p class="exp-desc">Led technical architecture for job marketplace.</p>
-<div class="exp-tech"><span>System Architecture</span><span>Data Pipelines</span></div>
+<p class="exp-desc">Built a job platform for blue-collar workers, removing technological barriers that prevent them from accessing decent employment. Led a team working to change the blue-collar industry through accessible technology.</p>
+<div class="exp-tech"><span>System Architecture</span><span>Mobile Development</span><span>Data Pipelines</span></div>
 </div>
 <div class="exp-item" data-cli="exp" data-info="Shakti Foundation | Deputy GM, IT | 2021-2022">
 <div class="exp-header"><span class="exp-company">Shakti Foundation</span><span class="exp-date">Jan 2021 - May 2022</span></div>
 <div class="exp-role">Deputy General Manager, IT</div>
 <div class="exp-loc">Dhaka, Bangladesh</div>
-<p class="exp-desc">Led Android development and project lifecycle management for ERP and SME mobile applications.</p>
-<div class="exp-tech"><span>Java</span><span>Kotlin</span><span>.NET</span><span>SQL Server</span></div>
+<p class="exp-desc">Worked on Fintech solutions for Microfinance and SMEs. Built and deployed mobile apps for the organization's ERP system serving thousands of field agents.</p>
+<div class="exp-tech"><span>Java</span><span>Kotlin</span><span>.NET</span><span>SQL Server</span><span>Fintech</span></div>
 </div>
 <div class="exp-item" data-cli="exp" data-info="Riseup Labs | Team Lead | 2019-2020">
 <div class="exp-header"><span class="exp-company">Riseup Labs</span><span class="exp-date">Sep 2019 - Dec 2020</span></div>
 <div class="exp-role">Software Engineer / Team Lead</div>
 <div class="exp-loc">Dhaka, Bangladesh</div>
-<p class="exp-desc">Led data projects for UNICEF/FAO.</p>
-<div class="exp-tech"><span>Python</span><span>Data Mining</span><span>BigQuery</span></div>
+<p class="exp-desc">Performed complete SDLCs for software products. Collaborated with organizations including UNICEF, FAO, Ministry of ICT, Ministry of Health, and Ministry of Education on data-driven projects.</p>
+<div class="exp-tech"><span>Python</span><span>Data Mining</span><span>BigQuery</span><span>Government Projects</span></div>
 </div>
 <div class="exp-item" data-cli="exp" data-info="AppconSoft | Software Developer | 2014-2017">
 <div class="exp-header"><span class="exp-company">AppconSoft</span><span class="exp-date">Nov 2014 - Apr 2017</span></div>
 <div class="exp-role">Software Developer</div>
 <div class="exp-loc">Dhaka, Bangladesh</div>
-<p class="exp-desc">Built Akor search engine with custom web crawlers.</p>
-<div class="exp-tech"><span>Apache Solr</span><span>Web Crawler</span><span>Selenium</span></div>
+<p class="exp-desc">Built the Akor search engine with enterprise-level web crawlers using Elastic Search and Apache Solr. Processed 10-25 million pages daily with custom scrapers in Python, PHP, and C.</p>
+<div class="exp-tech"><span>Apache Solr</span><span>Elasticsearch</span><span>Web Crawling</span><span>Selenium</span></div>
 </div>
 <div class="exp-item" data-cli="exp" data-info="AppsDrone | Programmer | 2013-2014">
 <div class="exp-header"><span class="exp-company">AppsDrone</span><span class="exp-date">Feb 2013 - Oct 2014</span></div>
 <div class="exp-role">Programmer</div>
 <div class="exp-loc">Dhaka, Bangladesh</div>
-<p class="exp-desc">Developed Play Store scraping platform.</p>
-<div class="exp-tech"><span>Data Mining</span><span>Play Store Scraping</span></div>
+<p class="exp-desc">My first professional role. Developed Android App Marketplace Analytics platform with Play Store scraping and data mining capabilities.</p>
+<div class="exp-tech"><span>Data Mining</span><span>Play Store Scraping</span><span>Analytics</span></div>
 </div>
 </section>
 
@@ -212,12 +278,12 @@ section{padding:25px 15px}
 <div class="projects">
 <a class="project" data-cli="blog" data-name="ByteTunnels" href="https://bytetunnels.com" target="_blank" rel="noopener">
 <div class="project-header"><h4>ByteTunnels</h4><span class="project-stars">bytetunnels.com</span></div>
-<p>Technical blog on web scraping, data extraction, and automation.</p>
-<div class="project-tech"><span>Web Scraping</span><span>Python</span><span>Automation</span></div>
+<p>Technical deep-dives on web scraping, anti-bot systems, browser fingerprinting, and automation techniques.</p>
+<div class="project-tech"><span>Web Scraping</span><span>Anti-Detection</span><span>Python</span></div>
 </a>
 <a class="project" data-cli="blog" data-name="Medium" href="https://arman-bd.medium.com" target="_blank" rel="noopener">
 <div class="project-header"><h4>Medium</h4><span class="project-stars">arman-bd.medium.com</span></div>
-<p>Articles on software development and automation challenges.</p>
+<p>Articles on software development, automation challenges, and engineering insights.</p>
 <div class="project-tech"><span>Technical Writing</span><span>Tutorials</span></div>
 </a>
 </div>
@@ -226,106 +292,104 @@ section{padding:25px 15px}
 
 <section class="container">
 <h2>Bored?</h2>
-<p class="cli-intro">View this page from your terminal — pick your poison: Bash, Python, JavaScript, or Ruby.</p>
+<p class="cli-intro">View this page from your terminal or IDE.</p>
 <div class="cli-box">
 <div class="cli-header">
 <div class="cli-dots"><span></span><span></span><span></span></div>
-<span class="cli-title">terminal</span>
+<span class="cli-title">arman@scraper:~/arman-bd.github.io$</span>
 <button class="cli-copy" onclick="copyCmd()" aria-label="Copy command">Copy</button>
 </div>
 <div class="cli-tabs">
 <button class="cli-tab active" data-lang="bash">Bash</button>
-<button class="cli-tab" data-lang="python">Python</button>
-<button class="cli-tab" data-lang="javascript">JavaScript</button>
-<button class="cli-tab" data-lang="ruby">Ruby</button>
+<button class="cli-tab" data-lang="python">BeautifulSoup</button>
+<button class="cli-tab" data-lang="javascript">Cheerio</button>
+<button class="cli-tab" data-lang="ruby">Nokogiri</button>
 </div>
-<pre class="cli-code active" id="cli-bash"><code>curl -s https://arman-bd.github.io | sed '/<pre/,/<\/pre>/d' | grep 'data-cli=' | sed -n \
-  -e 's/.*data-cli="name">\([^<]*\).*/\x1b[32m══════════════════════════\n \1\n══════════════════════════\x1b[0m/p' \
-  -e 's/.*data-cli="title">\([^<]*\).*/\x1b[36m \1\x1b[0m/p' \
-  -e 's/.*data-cli="tagline">\([^<]*\).*/\x1b[90m \1\x1b[0m/p' \
+<pre class="cli-code active" id="cli-bash"><code class="language-bash">curl -s https://arman-bd.github.io | sed '/&lt;pre/,/&lt;\/pre&gt;/d' | grep 'data-cli=' | sed -n \
+  -e 's/.*data-cli="name"&gt;\([^&lt;]*\).*/\x1b[32m══════════════════════════\n \1\n══════════════════════════\x1b[0m/p' \
+  -e 's/.*data-cli="title"&gt;\([^&lt;]*\).*/\x1b[36m \1\x1b[0m/p' \
+  -e 's/.*data-cli="tagline"&gt;\([^&lt;]*\).*/\x1b[90m \1\x1b[0m/p' \
   -e 's/.*data-cli="link" data-label="\([^"]*\)" href="mailto:\([^"]*\)".*/  \1: \2/p' \
   -e 's/.*data-cli="link" data-label="\([^"]*\)" href="\([^"]*\)".*/  \1: \2/p' \
-  -e 's/.*data-cli="section">\([^<]*\).*/\n\x1b[33m► \1\x1b[0m/p' \
-  -e 's/.*data-cli="item">\([^<]*\).*/  • \1/p' \
+  -e 's/.*data-cli="section"&gt;\([^&lt;]*\).*/\n\x1b[33m► \1\x1b[0m/p' \
+  -e 's/.*data-cli="item"&gt;\([^&lt;]*\).*/  • \1/p' \
   -e 's/.*data-cli="project" data-name="\([^"]*\)" data-stars="\([^"]*\)" href="\([^"]*\)".*/  \x1b[36m◆ \1 (\2★): \3\x1b[0m/p' \
   -e 's/.*data-cli="exp" data-info="\([^"]*\)".*/  \x1b[1m▸ \1\x1b[0m/p' \
   -e 's/.*data-cli="edu" data-info="\([^"]*\)".*/  \x1b[1m▸ \1\x1b[0m/p' \
   -e 's/.*data-cli="blog" data-name="\([^"]*\)" href="\([^"]*\)".*/  \x1b[36m◆ \1: \2\x1b[0m/p' \
-  -e 's/.*data-cli="footer">\([^<]*\).*/\n\x1b[90m\1\x1b[0m/p'</code></pre>
-<pre class="cli-code" id="cli-python"><code>import re, requests
+  -e 's/.*data-cli="footer"&gt;\([^&lt;]*\).*/\n\x1b[90m\1\x1b[0m/p'</code></pre>
+<pre class="cli-code" id="cli-python"><code class="language-python">import requests
+from bs4 import BeautifulSoup
 
-html = requests.get("https://arman-bd.github.io").text
-html = re.sub(r'&lt;pre[^&gt;]*&gt;.*?&lt;/pre&gt;', '', html, flags=re.DOTALL)
+soup = BeautifulSoup(requests.get("https://arman-bd.github.io").text, "html.parser")
+[pre.decompose() for pre in soup.find_all("pre")]
 
-patterns = [
-    (r'data-cli="name"&gt;([^&lt;]+)', "\033[32m══════════════════════════\n {}\n══════════════════════════\033[0m"),
-    (r'data-cli="title"&gt;([^&lt;]+)', "\033[36m {}\033[0m"),
-    (r'data-cli="tagline"&gt;([^&lt;]+)', "\033[90m {}\033[0m"),
-    (r'data-cli="link" data-label="([^"]+)" href="mailto:([^"]+)"', "  {}: {}"),
-    (r'data-cli="link" data-label="([^"]+)" href="(?!mailto:)([^"]+)"', "  {}: {}"),
-    (r'data-cli="section"&gt;([^&lt;]+)', "\n\033[33m► {}\033[0m"),
-    (r'data-cli="item"&gt;([^&lt;]+)', "  • {}"),
-    (r'data-cli="project" data-name="([^"]+)" data-stars="([^"]+)" href="([^"]+)"', "  \033[36m◆ {} ({}★): {}\033[0m"),
-    (r'data-cli="exp" data-info="([^"]+)"', "  \033[1m▸ {}\033[0m"),
-    (r'data-cli="edu" data-info="([^"]+)"', "  \033[1m▸ {}\033[0m"),
-    (r'data-cli="blog" data-name="([^"]+)" href="([^"]+)"', "  \033[36m◆ {}: {}\033[0m"),
-    (r'data-cli="footer"&gt;([^&lt;]+)', "\n\033[90m{}\033[0m"),
-]
+for el in soup.find_all(attrs={"data-cli": True}):
+    t, v = el["data-cli"], el.get_text(strip=True)
+    if t == "name": print(f"\033[32m{'═'*26}\n {v}\n{'═'*26}\033[0m")
+    elif t == "title": print(f"\033[36m {v}\033[0m")
+    elif t == "tagline": print(f"\033[90m {v}\033[0m")
+    elif t == "link": print(f"  {el['data-label']}: {el['href'].replace('mailto:','')}")
+    elif t == "section": print(f"\n\033[33m► {v}\033[0m")
+    elif t == "item": print(f"  • {v}")
+    elif t == "project": print(f"  \033[36m◆ {el['data-name']} ({el['data-stars']}★): {el['href']}\033[0m")
+    elif t == "exp": print(f"  \033[1m▸ {el['data-info']}\033[0m")
+    elif t == "edu": print(f"  \033[1m▸ {el['data-info']}\033[0m")
+    elif t == "blog": print(f"  \033[36m◆ {el['data-name']}: {el['href']}\033[0m")
+    elif t == "footer": print(f"\n\033[90m{v}\033[0m")</code></pre>
+<pre class="cli-code" id="cli-javascript"><code class="language-javascript">const cheerio = require("cheerio");
+const https = require("https");
 
-for pattern, fmt in patterns:
-    for m in re.findall(pattern, html):
-        print(fmt.format(*m) if isinstance(m, tuple) else fmt.format(m))</code></pre>
-<pre class="cli-code" id="cli-javascript"><code>const https = require('https');
+https.get("https://arman-bd.github.io", (res) =&gt; {
+  let html = "";
+  res.on("data", (chunk) =&gt; (html += chunk));
+  res.on("end", () =&gt; {
+    const $ = cheerio.load(html);
+    $("pre").remove();
 
-https.get('https://arman-bd.github.io', (res) =&gt; {
-  let html = '';
-  res.on('data', chunk =&gt; html += chunk);
-  res.on('end', () =&gt; {
-    html = html.replace(/&lt;pre[^&gt;]*&gt;[\s\S]*?&lt;\/pre&gt;/g, '');
-    const patterns = [
-      [/data-cli="name"&gt;([^&lt;]+)/g, '\x1b[32m══════════════════════════\n $1\n══════════════════════════\x1b[0m'],
-      [/data-cli="title"&gt;([^&lt;]+)/g, '\x1b[36m $1\x1b[0m'],
-      [/data-cli="tagline"&gt;([^&lt;]+)/g, '\x1b[90m $1\x1b[0m'],
-      [/data-cli="link" data-label="([^"]+)" href="mailto:([^"]+)"/g, '  $1: $2'],
-      [/data-cli="link" data-label="([^"]+)" href="(?!mailto:)([^"]+)"/g, '  $1: $2'],
-      [/data-cli="section"&gt;([^&lt;]+)/g, '\n\x1b[33m► $1\x1b[0m'],
-      [/data-cli="item"&gt;([^&lt;]+)/g, '  • $1'],
-      [/data-cli="project" data-name="([^"]+)" data-stars="([^"]+)" href="([^"]+)"/g, '  \x1b[36m◆ $1 ($2★): $3\x1b[0m'],
-      [/data-cli="exp" data-info="([^"]+)"/g, '  \x1b[1m▸ $1\x1b[0m'],
-      [/data-cli="edu" data-info="([^"]+)"/g, '  \x1b[1m▸ $1\x1b[0m'],
-      [/data-cli="blog" data-name="([^"]+)" href="([^"]+)"/g, '  \x1b[36m◆ $1: $2\x1b[0m'],
-      [/data-cli="footer"&gt;([^&lt;]+)/g, '\n\x1b[90m$1\x1b[0m'],
-    ];
-    patterns.forEach(([regex, fmt]) =&gt; {
-      let match; while ((match = regex.exec(html)) !== null) {
-        let out = fmt;
-        for (let i = 1; i &lt; match.length; i++) out = out.replace('$' + i, match[i]);
-        console.log(out);
-      }
+    $("[data-cli]").each((_, el) =&gt; {
+      const $el = $(el);
+      const t = $el.attr("data-cli");
+      const v = $el.text().trim();
+
+      if (t === "name") console.log(`\x1b[32m${"═".repeat(26)}\n ${v}\n${"═".repeat(26)}\x1b[0m`);
+      else if (t === "title") console.log(`\x1b[36m ${v}\x1b[0m`);
+      else if (t === "tagline") console.log(`\x1b[90m ${v}\x1b[0m`);
+      else if (t === "link") console.log(`  ${$el.attr("data-label")}: ${$el.attr("href").replace("mailto:","")}`);
+      else if (t === "section") console.log(`\n\x1b[33m► ${v}\x1b[0m`);
+      else if (t === "item") console.log(`  • ${v}`);
+      else if (t === "project") console.log(`  \x1b[36m◆ ${$el.attr("data-name")} (${$el.attr("data-stars")}★): ${$el.attr("href")}\x1b[0m`);
+      else if (t === "exp") console.log(`  \x1b[1m▸ ${$el.attr("data-info")}\x1b[0m`);
+      else if (t === "edu") console.log(`  \x1b[1m▸ ${$el.attr("data-info")}\x1b[0m`);
+      else if (t === "blog") console.log(`  \x1b[36m◆ ${$el.attr("data-name")}: ${$el.attr("href")}\x1b[0m`);
+      else if (t === "footer") console.log(`\n\x1b[90m${v}\x1b[0m`);
     });
   });
 });</code></pre>
-<pre class="cli-code" id="cli-ruby"><code>require 'net/http'
+<pre class="cli-code" id="cli-ruby"><code class="language-ruby">require "net/http"
+require "nokogiri"
 
-html = Net::HTTP.get(URI('https://arman-bd.github.io'))
-html = html.gsub(/&lt;pre[^&gt;]*&gt;.*?&lt;\/pre&gt;/m, '')
+doc = Nokogiri::HTML(Net::HTTP.get(URI("https://arman-bd.github.io")))
+doc.css("pre").remove
 
-patterns = [
-  [/data-cli="name"&gt;([^&lt;]+)/, "\e[32m#{'═'*26}\n %s\n#{'═'*26}\e[0m"],
-  [/data-cli="title"&gt;([^&lt;]+)/, "\e[36m %s\e[0m"],
-  [/data-cli="tagline"&gt;([^&lt;]+)/, "\e[90m %s\e[0m"],
-  [/data-cli="link" data-label="([^"]+)" href="mailto:([^"]+)"/, "  %s: %s"],
-  [/data-cli="link" data-label="([^"]+)" href="(?!mailto:)([^"]+)"/, "  %s: %s"],
-  [/data-cli="section"&gt;([^&lt;]+)/, "\n\e[33m► %s\e[0m"],
-  [/data-cli="item"&gt;([^&lt;]+)/, "  • %s"],
-  [/data-cli="project" data-name="([^"]+)" data-stars="([^"]+)" href="([^"]+)"/, "  \e[36m◆ %s (%s★): %s\e[0m"],
-  [/data-cli="exp" data-info="([^"]+)"/, "  \e[1m▸ %s\e[0m"],
-  [/data-cli="edu" data-info="([^"]+)"/, "  \e[1m▸ %s\e[0m"],
-  [/data-cli="blog" data-name="([^"]+)" href="([^"]+)"/, "  \e[36m◆ %s: %s\e[0m"],
-  [/data-cli="footer"&gt;([^&lt;]+)/, "\n\e[90m%s\e[0m"],
-]
+doc.css("[data-cli]").each do |el|
+  t = el["data-cli"]
+  v = el.text.strip
 
-patterns.each { |p, f| html.scan(p) { |m| puts f % m } }</code></pre>
+  case t
+  when "name" then puts "\e[32m#{"═" * 26}\n #{v}\n#{"═" * 26}\e[0m"
+  when "title" then puts "\e[36m #{v}\e[0m"
+  when "tagline" then puts "\e[90m #{v}\e[0m"
+  when "link" then puts "  #{el["data-label"]}: #{el["href"].sub("mailto:", "")}"
+  when "section" then puts "\n\e[33m► #{v}\e[0m"
+  when "item" then puts "  • #{v}"
+  when "project" then puts "  \e[36m◆ #{el["data-name"]} (#{el["data-stars"]}★): #{el["href"]}\e[0m"
+  when "exp" then puts "  \e[1m▸ #{el["data-info"]}\e[0m"
+  when "edu" then puts "  \e[1m▸ #{el["data-info"]}\e[0m"
+  when "blog" then puts "  \e[36m◆ #{el["data-name"]}: #{el["href"]}\e[0m"
+  when "footer" then puts "\n\e[90m#{v}\e[0m"
+  end
+end</code></pre>
 </div>
 </section>
 
@@ -356,13 +420,49 @@ document.getElementById('cli-'+tab.dataset.lang).classList.add('active');
 
 function copyCmd(){
 const activeCode=document.querySelector('.cli-code.active code');
-const code=activeCode.textContent.replace(/\\\n\s*/g,' ');
+let code=activeCode.textContent.replace(/\\\n\s*/g,' ');
 navigator.clipboard.writeText(code).then(()=>{
 const btn=document.querySelector('.cli-copy');
 btn.textContent='Copied!';
 setTimeout(()=>btn.textContent='Copy',2000);
 });
 }
+
+// Simple syntax highlighter
+(function(){
+  const e=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const w=(s,c)=>'<span class="token '+c+'">'+s+'</span>';
+  const kw={
+    python:'import|from|for|in|if|elif|else|def|class|return|print|True|False|None|and|or|not|with|as|try|except|lambda',
+    javascript:'const|let|var|function|return|if|else|for|while|class|import|export|from|require|true|false|null|undefined|new|this|async|await',
+    ruby:'require|def|end|do|if|else|elsif|case|when|then|class|module|return|true|false|nil|puts|each',
+    bash:'if|then|else|fi|for|do|done|while|case|esac'
+  };
+  const cmd='curl|grep|sed|awk|echo|cat|wget|chmod|mkdir|rm|cp|mv|ls|cd|pwd|tar|gzip|find|xargs|sort|uniq|head|tail|wc';
+  document.querySelectorAll('.cli-code code').forEach(block=>{
+    const lang=block.className.replace('language-','');
+    const code=block.textContent;
+    const tokens=[];
+    const re=/(#[^\n]*|\/\/[^\n]*|"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`|-[a-zA-Z]+|\b\d+\b|\b[a-zA-Z_][a-zA-Z0-9_]*\b|[^\s]|\s+)/g;
+    let m;
+    while((m=re.exec(code))!==null){
+      const t=m[0];
+      if((lang==='python'||lang==='ruby'||lang==='bash')&&t.startsWith('#'))tokens.push(w(e(t),'comment'));
+      else if(t.startsWith('//'))tokens.push(w(e(t),'comment'));
+      else if(t.startsWith('"')||t.startsWith("'")||t.startsWith('`'))tokens.push(w(e(t),'string'));
+      else if(lang==='bash'&&/^-[a-zA-Z]+$/.test(t))tokens.push(w(e(t),'flag'));
+      else if(lang==='bash'&&new RegExp('^('+cmd+')$').test(t))tokens.push(w(e(t),'command'));
+      else if(/^\d+$/.test(t))tokens.push(w(e(t),'number'));
+      else if(kw[lang]&&new RegExp('^('+kw[lang]+')$').test(t))tokens.push(w(e(t),'keyword'));
+      else if(/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(t)){
+        const next=code.slice(re.lastIndex).match(/^\s*\(/);
+        tokens.push(next?w(e(t),'function'):e(t));
+      }
+      else tokens.push(e(t));
+    }
+    block.innerHTML=tokens.join('');
+  });
+})();
 </script>
 
 <!-- Google tag (gtag.js) -->
@@ -373,6 +473,34 @@ setTimeout(()=>btn.textContent='Copy',2000);
   gtag('js', new Date());
 
   gtag('config', 'G-E0N9Z2NBY7');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1153720160308020');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1153720160308020&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- PostHog -->
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_9rQxEHB2oI2G4YcSpIwQgNNGajM5TjWmC7EvqCilYB0', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2025-05-24',
+        person_profiles: 'always',
+    })
 </script>
 </body>
 </html>
