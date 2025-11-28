@@ -13,7 +13,8 @@
 body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
 .container{max-width:900px;margin:0 auto;padding:20px}
 header{text-align:center;padding:60px 20px 50px;border-bottom:1px solid var(--border);position:relative}
-.theme-toggle{position:fixed;top:20px;right:20px;background:var(--card);border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer;font-size:1.2rem;z-index:1000}
+.theme-toggle{position:fixed;top:20px;right:20px;background:var(--card);border:1px solid var(--accent);color:var(--accent);padding:10px 14px;border-radius:10px;cursor:pointer;font-size:1.3rem;z-index:1000;transition:all .2s;box-shadow:0 0 10px var(--glow)}
+.theme-toggle:hover{background:var(--accent);color:#fff;transform:scale(1.05)}
 h1{font-size:2.6rem;margin-bottom:10px;letter-spacing:-0.5px}
 .title{color:var(--accent);font-size:1.2rem;margin-bottom:10px;font-weight:600}
 .tagline{color:var(--muted);font-size:0.95rem;margin-bottom:14px;max-width:520px;margin-left:auto;margin-right:auto;font-style:italic}
@@ -405,6 +406,7 @@ localStorage.setItem('theme',current==='light'?'dark':'light');
 (function(){
 const saved=localStorage.getItem('theme');
 if(saved)document.documentElement.setAttribute('data-theme',saved);
+else document.documentElement.setAttribute('data-theme','light');
 })();
 
 // Tab switching
