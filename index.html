@@ -10,12 +10,12 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="Arman Hossain">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#f8f9fa">
 <title>Arman Hossain - Web Scraping & Data Extraction Specialist</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--card:#111;--accent:#00d4ff;--accent2:#0099cc;--text:#e5e5e5;--muted:#888;--border:#1a1a1a;--glow:rgba(0,212,255,0.1)}
-[data-theme="light"]{--bg:#f8f9fa;--card:#fff;--accent:#0077b6;--accent2:#005f8a;--text:#1a1a1a;--muted:#666;--border:#e0e0e0;--glow:rgba(0,119,182,0.08)}
+:root{--bg:#f8f9fa;--card:#fff;--accent:#0077b6;--accent2:#005f8a;--text:#1a1a1a;--muted:#666;--border:#e0e0e0;--glow:rgba(0,119,182,0.08)}
+[data-theme="dark"]{--bg:#0a0a0a;--card:#111;--accent:#00d4ff;--accent2:#0099cc;--text:#e5e5e5;--muted:#888;--border:#1a1a1a;--glow:rgba(0,212,255,0.1)}
 body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
 .container{max-width:900px;margin:0 auto;padding:20px}
 header{text-align:center;padding:60px 20px 50px;border-bottom:1px solid var(--border);position:relative}
@@ -35,8 +35,8 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 .story-text{color:var(--muted);font-size:0.9rem;line-height:1.9;margin-bottom:16px}
 .story-text:last-child{margin-bottom:0}
 .story-highlight{color:var(--accent);font-weight:600}
-.story-year{display:inline-block;background:var(--accent);color:#000;padding:2px 10px;border-radius:4px;font-size:0.75rem;font-weight:700;margin-right:6px}
-[data-theme="light"] .story-year{background:#0077b6;color:#fff}
+.story-year{display:inline-block;background:var(--accent);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.75rem;font-weight:700;margin-right:6px}
+[data-theme="dark"] .story-year{color:#000}
 .highlight{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-top:20px}
 .highlight h3{color:var(--accent);margin-bottom:14px;font-size:1.05rem}
 .highlight ul{list-style:none;display:grid;gap:8px}
@@ -45,13 +45,13 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 .tech-cat{background:var(--card);padding:18px;border-radius:10px;border:1px solid var(--border);transition:all .2s}
 .tech-cat:hover{border-color:var(--accent);box-shadow:0 0 20px var(--glow)}
-.tech-cat h4{color:var(--accent);font-size:0.85rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px}
+.tech-cat h3{color:var(--accent);font-size:0.85rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600}
 .tech-cat p{font-size:0.85rem;color:var(--muted)}
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .project{background:var(--card);padding:20px;border-radius:10px;border:1px solid var(--border);text-decoration:none;display:block;transition:all .2s}
 .project:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px var(--glow)}
 .project-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.project h4{color:var(--accent);font-size:1rem}
+.project h3{color:var(--accent);font-size:1rem;font-weight:600}
 .project-stars{color:var(--muted);font-size:0.75rem}
 .project p{font-size:0.85rem;color:var(--muted);margin-bottom:12px;line-height:1.6}
 .project-context{font-size:0.8rem;color:var(--text);margin-bottom:12px;padding:10px;background:var(--bg);border-radius:6px;border-left:3px solid var(--accent)}
@@ -78,10 +78,10 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 .cli-dots span{width:12px;height:12px;border-radius:50%;background:#ff5f56}
 .cli-dots span:nth-child(2){background:#ffbd2e}
 .cli-dots span:nth-child(3){background:#27ca40}
-.cli-title{flex:1;text-align:center;font-size:0.75rem;color:var(--muted)}
-.cli-copy{background:var(--accent);color:#000;border:none;padding:6px 14px;border-radius:5px;font-size:0.7rem;cursor:pointer;transition:all .2s;font-weight:600}
+.cli-title{flex:1;text-align:center;font-size:0.75rem;color:var(--text)}
+.cli-copy{background:var(--accent);color:#fff;border:none;padding:6px 14px;border-radius:5px;font-size:0.7rem;cursor:pointer;transition:all .2s;font-weight:600}
 .cli-copy:hover{opacity:0.85;transform:scale(1.02)}
-[data-theme="light"] .cli-copy{color:#fff}
+[data-theme="dark"] .cli-copy{color:#000}
 .cli-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--card)}
 .cli-tab{padding:12px 22px;font-size:0.8rem;color:var(--muted);cursor:pointer;border:none;background:transparent;transition:all .2s;border-bottom:2px solid transparent}
 .cli-tab:hover{color:var(--text);background:var(--bg)}
@@ -91,29 +91,28 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 .cli-code.active{display:block}
 .cli-code code{color:var(--text);font-family:'SF Mono',Monaco,Consolas,monospace}
 .token.comment,.token.prolog{color:#6a737d}
-.token.keyword,.token.selector,.token.important{color:#ff7b72}
-.token.string,.token.attr-value{color:#a5d6ff}
-.token.function,.token.attr-name{color:#d2a8ff}
-.token.number,.token.boolean{color:#79c0ff}
-.token.operator,.token.punctuation{color:#8b949e}
-.token.variable,.token.property{color:#ffa657}
-.token.class-name,.token.constant{color:#7ee787}
-.token.builtin{color:#f0883e}
-.token.command{color:#79c0ff}
-.token.flag{color:#ffa657}
-.token.escape{color:#7ee787}
-[data-theme="light"] .token.command{color:#0550ae}
-[data-theme="light"] .token.flag{color:#953800}
-[data-theme="light"] .token.comment,[data-theme="light"] .token.prolog{color:#6a737d}
-[data-theme="light"] .token.keyword,[data-theme="light"] .token.selector{color:#cf222e}
-[data-theme="light"] .token.string,[data-theme="light"] .token.attr-value{color:#0a3069}
-[data-theme="light"] .token.function,[data-theme="light"] .token.attr-name{color:#8250df}
-[data-theme="light"] .token.number,[data-theme="light"] .token.boolean{color:#0550ae}
-[data-theme="light"] .token.operator,[data-theme="light"] .token.punctuation{color:#24292f}
-[data-theme="light"] .token.variable,[data-theme="light"] .token.property{color:#953800}
-[data-theme="light"] .token.escape{color:#116329}
-[data-theme="light"] .token.class-name,[data-theme="light"] .token.constant{color:#116329}
-[data-theme="light"] .token.builtin{color:#cf222e}
+.token.keyword,.token.selector,.token.important{color:#cf222e}
+.token.string,.token.attr-value{color:#0a3069}
+.token.function,.token.attr-name{color:#8250df}
+.token.number,.token.boolean{color:#0550ae}
+.token.operator,.token.punctuation{color:#24292f}
+.token.variable,.token.property{color:#953800}
+.token.class-name,.token.constant{color:#116329}
+.token.builtin{color:#cf222e}
+.token.command{color:#0550ae}
+.token.flag{color:#953800}
+.token.escape{color:#116329}
+[data-theme="dark"] .token.keyword,[data-theme="dark"] .token.selector{color:#ff7b72}
+[data-theme="dark"] .token.string,[data-theme="dark"] .token.attr-value{color:#a5d6ff}
+[data-theme="dark"] .token.function,[data-theme="dark"] .token.attr-name{color:#d2a8ff}
+[data-theme="dark"] .token.number,[data-theme="dark"] .token.boolean{color:#79c0ff}
+[data-theme="dark"] .token.operator,[data-theme="dark"] .token.punctuation{color:#8b949e}
+[data-theme="dark"] .token.variable,[data-theme="dark"] .token.property{color:#ffa657}
+[data-theme="dark"] .token.class-name,[data-theme="dark"] .token.constant{color:#7ee787}
+[data-theme="dark"] .token.builtin{color:#f0883e}
+[data-theme="dark"] .token.command{color:#79c0ff}
+[data-theme="dark"] .token.flag{color:#ffa657}
+[data-theme="dark"] .token.escape{color:#7ee787}
 footer{text-align:center;padding:30px;color:var(--muted);font-size:0.8rem;border-top:1px solid var(--border)}
 @media(max-width:600px){
 h1{font-size:1.8rem}
@@ -140,6 +139,7 @@ section{padding:30px 15px}
 </div>
 </header>
 
+<main>
 <div class="container">
 <section>
 <h2 data-cli="section">The Origin Story</h2>
@@ -178,12 +178,12 @@ section{padding:30px 15px}
 <section>
 <h2 data-cli="section">Tech Stack</h2>
 <div class="tech-grid">
-<div class="tech-cat"><h4>Languages</h4><p data-cli="item">Python, JavaScript, TypeScript, Ruby, C</p></div>
-<div class="tech-cat"><h4>Automation</h4><p data-cli="item">Playwright, Puppeteer, Selenium, Camoufox, Scrapy</p></div>
-<div class="tech-cat"><h4>Backend</h4><p data-cli="item">FastAPI, Express, NestJS, Rails</p></div>
-<div class="tech-cat"><h4>Frontend</h4><p data-cli="item">Vue, React, Next.js</p></div>
-<div class="tech-cat"><h4>Databases</h4><p data-cli="item">PostgreSQL, MongoDB, Redis, Neo4j, Apache Solr</p></div>
-<div class="tech-cat"><h4>Cloud & DevOps</h4><p data-cli="item">GCP, AWS, Azure, Docker, Kubernetes</p></div>
+<div class="tech-cat"><h3>Languages</h3><p data-cli="item">Python, JavaScript, TypeScript, Ruby, C</p></div>
+<div class="tech-cat"><h3>Automation</h3><p data-cli="item">Playwright, Puppeteer, Selenium, Camoufox, Scrapy</p></div>
+<div class="tech-cat"><h3>Backend</h3><p data-cli="item">FastAPI, Express, NestJS, Rails</p></div>
+<div class="tech-cat"><h3>Frontend</h3><p data-cli="item">Vue, React, Next.js</p></div>
+<div class="tech-cat"><h3>Databases</h3><p data-cli="item">PostgreSQL, MongoDB, Redis, Neo4j, Apache Solr</p></div>
+<div class="tech-cat"><h3>Cloud & DevOps</h3><p data-cli="item">GCP, AWS, Azure, Docker, Kubernetes</p></div>
 </div>
 </section>
 
@@ -191,25 +191,25 @@ section{padding:30px 15px}
 <h2 data-cli="section">Open Source</h2>
 <div class="projects">
 <a class="project featured" data-cli="project" data-name="httpmorph" data-stars="100+" href="https://github.com/arman-bd/httpmorph" target="_blank" rel="noopener">
-<div class="project-header"><h4>httpmorph</h4><span class="project-stars">100+ stars</span></div>
+<div class="project-header"><h3>httpmorph</h3><span class="project-stars">100+ stars</span></div>
 <p>Drop-in replacement for Python requests with perfect Chrome fingerprint matching. Bypasses TLS fingerprinting used by Cloudflare and similar services.</p>
 <div class="project-context">Built to solve the growing problem of JA3/JA4 fingerprinting that was blocking legitimate automation.</div>
 <div class="project-tech"><span>Python</span><span>C</span><span>BoringSSL</span><span>TLS Fingerprinting</span></div>
 </a>
 <a class="project" data-cli="project" data-name="chromixer" data-stars="14" href="https://github.com/arman-bd/chromixer" target="_blank" rel="noopener">
-<div class="project-header"><h4>chromixer</h4><span class="project-stars">14 stars</span></div>
+<div class="project-header"><h3>chromixer</h3><span class="project-stars">14 stars</span></div>
 <p>Chrome extension for browser fingerprint protection and randomization.</p>
 <div class="project-context">Developed from years of studying how websites track and identify browsers.</div>
 <div class="project-tech"><span>JavaScript</span><span>Chrome Extension</span><span>Privacy</span></div>
 </a>
 <a class="project" data-cli="project" data-name="www2any" data-stars="4" href="https://github.com/arman-bd/www2any" target="_blank" rel="noopener">
-<div class="project-header"><h4>www2any</h4><span class="project-stars">4 stars</span></div>
+<div class="project-header"><h3>www2any</h3><span class="project-stars">4 stars</span></div>
 <p>Web scraper using LLMs to intelligently convert web content into structured formats.</p>
 <div class="project-context">Exploring how AI can make data extraction more adaptive and resilient.</div>
 <div class="project-tech"><span>Python</span><span>Playwright</span><span>LLM</span></div>
 </a>
 <a class="project" data-cli="project" data-name="khudro" data-stars="18" href="https://github.com/arman-bd/khudro" target="_blank" rel="noopener">
-<div class="project-header"><h4>khudro</h4><span class="project-stars">18 stars</span></div>
+<div class="project-header"><h3>khudro</h3><span class="project-stars">18 stars</span></div>
 <p>Lightweight web server built from scratch in C using sockets and threads for concurrent connections.</p>
 <div class="project-context">Built to understand low-level networking—supports 400+ MIME types and configurable buffer limits.</div>
 <div class="project-tech"><span>C</span><span>Sockets</span><span>Multithreading</span></div>
@@ -286,12 +286,12 @@ section{padding:30px 15px}
 <h2 data-cli="section">Writing</h2>
 <div class="projects">
 <a class="project" data-cli="blog" data-name="ByteTunnels" href="https://bytetunnels.com" target="_blank" rel="noopener">
-<div class="project-header"><h4>ByteTunnels</h4><span class="project-stars">bytetunnels.com</span></div>
+<div class="project-header"><h3>ByteTunnels</h3><span class="project-stars">bytetunnels.com</span></div>
 <p>Technical deep-dives on web scraping, anti-bot systems, browser fingerprinting, and automation techniques.</p>
 <div class="project-tech"><span>Web Scraping</span><span>Anti-Detection</span><span>Python</span></div>
 </a>
 <a class="project" data-cli="blog" data-name="Medium" href="https://arman-bd.medium.com" target="_blank" rel="noopener">
-<div class="project-header"><h4>Medium</h4><span class="project-stars">arman-bd.medium.com</span></div>
+<div class="project-header"><h3>Medium</h3><span class="project-stars">arman-bd.medium.com</span></div>
 <p>Articles on software development, automation challenges, and engineering insights.</p>
 <div class="project-tech"><span>Technical Writing</span><span>Tutorials</span></div>
 </a>
@@ -405,6 +405,7 @@ doc.css("[data-cli]").each do |el|
 end</code></pre>
 </div>
 </section>
+</main>
 
 <footer data-cli="footer">© 2025 Arman Hossain</footer>
 
@@ -412,13 +413,12 @@ end</code></pre>
 function toggleTheme(){
 const html=document.documentElement;
 const current=html.getAttribute('data-theme');
-html.setAttribute('data-theme',current==='light'?'dark':'light');
-localStorage.setItem('theme',current==='light'?'dark':'light');
+html.setAttribute('data-theme',current==='dark'?'':'dark');
+localStorage.setItem('theme',current==='dark'?'light':'dark');
 }
 (function(){
 const saved=localStorage.getItem('theme');
-if(saved)document.documentElement.setAttribute('data-theme',saved);
-else document.documentElement.setAttribute('data-theme','light');
+if(saved==='dark')document.documentElement.setAttribute('data-theme','dark');
 })();
 
 // Tab switching
