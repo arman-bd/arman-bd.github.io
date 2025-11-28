@@ -124,7 +124,7 @@ section{padding:30px 15px}
 <p class="tagline" data-cli="tagline">"If you can see it, I believe there's a way to extract it."</p>
 <p class="location">Berlin Metropolitan Area</p>
 <div class="contact">
-<a data-cli="link" data-label="Email" href="mailto:armans.postbox@gmail.com" target="_blank" rel="noopener">Email</a>
+<a data-cli="link" data-label="Email" href="mailto:arman.fixes@gmail.com" target="_blank" rel="noopener">Email</a>
 <a data-cli="link" data-label="LinkedIn" href="https://linkedin.com/in/armanhossain" target="_blank" rel="noopener">LinkedIn</a>
 <a data-cli="link" data-label="GitHub" href="https://github.com/arman-bd" target="_blank" rel="noopener">GitHub</a>
 <a data-cli="link" data-label="Blog" href="https://bytetunnels.com" target="_blank" rel="noopener">Blog</a>
@@ -501,6 +501,45 @@ src="https://www.facebook.com/tr?id=1153720160308020&ev=PageView&noscript=1"
         defaults: '2025-05-24',
         person_profiles: 'always',
     })
+</script>
+
+<!-- Event Tracking -->
+<script>
+function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');}
+function track(evt,props){
+  if(typeof gtag==='function')gtag('event',evt,props||{});
+  if(typeof fbq==='function')fbq('trackCustom',evt,props||{});
+  if(typeof posthog!=='undefined'&&posthog.capture)posthog.capture(evt,props||{});
+}
+document.addEventListener('click',function(e){
+  const el=e.target.closest('a[href],button');
+  if(!el)return;
+  const href=el.getAttribute('href')||'';
+  let evt;
+  if(el.classList.contains('cli-tab')){
+    evt='code_view_'+slug(el.textContent);
+  }else if(el.classList.contains('cli-copy')){
+    const tab=document.querySelector('.cli-tab.active');
+    evt='code_copy_'+(tab?slug(tab.textContent):'unknown');
+  }else if(el.classList.contains('theme-toggle')){
+    evt='theme_toggle_'+(document.documentElement.getAttribute('data-theme')==='light'?'dark':'light');
+  }else if(el.closest('.contact')){
+    evt='contact_click_'+slug(el.textContent);
+  }else if(el.closest('.project')){
+    const h=el.querySelector('h4');
+    evt='project_click_'+(h?slug(h.textContent):slug(href));
+  }else if(el.closest('.exp-item')){
+    const c=el.closest('.exp-item').querySelector('.exp-company');
+    evt='experience_click_'+(c?slug(c.textContent):slug(href));
+  }else if(href.startsWith('mailto:')){
+    evt='email_click';
+  }else if(href.startsWith('http')){
+    evt='external_click_'+slug(new URL(href).hostname);
+  }else{
+    return;
+  }
+  track(evt,{url:href});
+});
 </script>
 </body>
 </html>
