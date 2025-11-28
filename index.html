@@ -29,7 +29,7 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 .story-text{color:var(--muted);font-size:0.9rem;line-height:1.9;margin-bottom:16px}
 .story-text:last-child{margin-bottom:0}
 .story-highlight{color:var(--accent);font-weight:600}
-.story-year{display:inline-block;background:var(--accent);color:#fff;padding:2px 10px;border-radius:4px;font-size:0.75rem;font-weight:700;margin-right:6px}
+.story-year{display:inline-block;background:var(--accent);color:#000;padding:2px 10px;border-radius:4px;font-size:0.75rem;font-weight:700;margin-right:6px}
 [data-theme="light"] .story-year{background:#0077b6;color:#fff}
 .highlight{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-top:20px}
 .highlight h3{color:var(--accent);margin-bottom:14px;font-size:1.05rem}
@@ -73,8 +73,9 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 .cli-dots span:nth-child(2){background:#ffbd2e}
 .cli-dots span:nth-child(3){background:#27ca40}
 .cli-title{flex:1;text-align:center;font-size:0.75rem;color:var(--muted)}
-.cli-copy{background:var(--accent);color:#fff;border:none;padding:6px 14px;border-radius:5px;font-size:0.7rem;cursor:pointer;transition:all .2s;font-weight:600}
+.cli-copy{background:var(--accent);color:#000;border:none;padding:6px 14px;border-radius:5px;font-size:0.7rem;cursor:pointer;transition:all .2s;font-weight:600}
 .cli-copy:hover{opacity:0.85;transform:scale(1.02)}
+[data-theme="light"] .cli-copy{color:#fff}
 .cli-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--card)}
 .cli-tab{padding:12px 22px;font-size:0.8rem;color:var(--muted);cursor:pointer;border:none;background:transparent;transition:all .2s;border-bottom:2px solid transparent}
 .cli-tab:hover{color:var(--text);background:var(--bg)}
@@ -94,6 +95,7 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 .token.builtin{color:#f0883e}
 .token.command{color:#79c0ff}
 .token.flag{color:#ffa657}
+.token.escape{color:#7ee787}
 [data-theme="light"] .token.command{color:#0550ae}
 [data-theme="light"] .token.flag{color:#953800}
 [data-theme="light"] .token.comment,[data-theme="light"] .token.prolog{color:#6a737d}
@@ -103,6 +105,7 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 [data-theme="light"] .token.number,[data-theme="light"] .token.boolean{color:#0550ae}
 [data-theme="light"] .token.operator,[data-theme="light"] .token.punctuation{color:#24292f}
 [data-theme="light"] .token.variable,[data-theme="light"] .token.property{color:#953800}
+[data-theme="light"] .token.escape{color:#116329}
 [data-theme="light"] .token.class-name,[data-theme="light"] .token.constant{color:#116329}
 [data-theme="light"] .token.builtin{color:#cf222e}
 footer{text-align:center;padding:30px;color:var(--muted);font-size:0.8rem;border-top:1px solid var(--border)}
@@ -122,8 +125,7 @@ section{padding:30px 15px}
 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
 <h1 data-cli="name">Arman Hossain</h1>
 <p class="title" data-cli="title">Web Scraping & Data Extraction Specialist</p>
-<p class="tagline" data-cli="tagline">"If you can see it, I believe there's a way to extract it."</p>
-<p class="location">Berlin Metropolitan Area</p>
+<p class="tagline" data-cli="tagline" data-text="If humans can access it, bots can too. Just takes some coffee and determination.">"If humans can access it, bots can too.<br>Just takes some coffee and determination."</p>
 <div class="contact">
 <a data-cli="link" data-label="Email" href="mailto:arman.fixes@gmail.com" target="_blank" rel="noopener">Email</a>
 <a data-cli="link" data-label="LinkedIn" href="https://linkedin.com/in/armanhossain" target="_blank" rel="noopener">LinkedIn</a>
@@ -136,19 +138,19 @@ section{padding:30px 15px}
 <section>
 <h2 data-cli="section">The Origin Story</h2>
 <div class="story">
-<p class="story-text">
+<p class="story-text" data-cli="story" data-year="2000" data-text="Started programming at age 8 with Visual Basic 6. Web scraping wasn't just a skill—it was survival.">
 <span class="story-year">2000</span> I started programming at <span class="story-highlight">age eight</span> with Visual Basic 6. Growing up in rural Bangladesh with limited internet access, I quickly realized that web scraping wasn't just a skill—it was survival. The cost of staying online was simply too high.
 </p>
-<p class="story-text">
+<p class="story-text" data-cli="story" data-year="2004" data-text="Began scraping websites using VB6's MSHTML library. Explored CURL, WGET, sockets, browser macros, Selenium.">
 <span class="story-year">2004</span> I began scraping websites using VB6's MSHTML library. By downloading tutorials and forum content for offline reading, I saved enough money to keep learning. That necessity became a passion—I started exploring every tool I could find: <span class="story-highlight">CURL, WGET, sockets, browser macros, and later Selenium</span>.
 </p>
-<p class="story-text">
+<p class="story-text" data-cli="story" data-year="2008" data-text="Started building mobile apps for GetJar and Nokia Ovi Store using J2ME. Proficient in Java, PHP, Python.">
 <span class="story-year">2008</span> I started building mobile apps for GetJar and Nokia's Ovi Store using J2ME. By then, I was proficient in Java, PHP, and Python. The transition to Android app development soon followed.
 </p>
-<p class="story-text">
+<p class="story-text" data-cli="story" data-year="2014" data-text="Built enterprise search engine crawling 10-25M pages daily, handling 4-8 TB data. Apache Solr + Python/PHP/C.">
 <span class="story-year">2014</span> I built an enterprise-level search engine with a web-crawling operation that processed <span class="story-highlight">10-25 million pages daily</span>—handling 4-8 TB of data. Most of the infrastructure ran on Apache Solr, with scrapers written in Python, PHP, and C. Anti-bot detection, CAPTCHAs, rate limiting—I'd learned to work around them all.
 </p>
-<p class="story-text">
+<p class="story-text" data-cli="story" data-year="2024" data-text="24 years of web scraping. I started programming because I wanted to scrape websites—and never stopped.">
 To sum it up: <span class="story-highlight">I started programming because I wanted to scrape websites</span>. It's been about 24 years now, and I never really stopped. Web scraping and reverse engineering aren't just what I do—they're why I code.
 </p>
 </div>
@@ -307,17 +309,18 @@ To sum it up: <span class="story-highlight">I started programming because I want
 <button class="cli-tab" data-lang="ruby">Nokogiri</button>
 </div>
 <pre class="cli-code active" id="cli-bash"><code class="language-bash">curl -s https://arman-bd.github.io | sed '/&lt;pre/,/&lt;\/pre&gt;/d' | grep 'data-cli=' | sed -n \
-  -e 's/.*data-cli="name"&gt;\([^&lt;]*\).*/\x1b[32m══════════════════════════\n \1\n══════════════════════════\x1b[0m/p' \
-  -e 's/.*data-cli="title"&gt;\([^&lt;]*\).*/\x1b[36m \1\x1b[0m/p' \
-  -e 's/.*data-cli="tagline"&gt;\([^&lt;]*\).*/\x1b[90m \1\x1b[0m/p' \
+  -e 's/.*data-cli="name">\([^<]*\).*/\x1b[32m============\n\1\n============\x1b[0m/p' \
+  -e 's/.*data-cli="title"&gt;\([^&lt;]*\).*/\x1b[36m\1\x1b[0m/p' \
+  -e 's/.*data-cli="tagline" data-text="\([^"]*\)".*/\x1b[90m\1\x1b[0m/p' \
   -e 's/.*data-cli="link" data-label="\([^"]*\)" href="mailto:\([^"]*\)".*/  \1: \2/p' \
   -e 's/.*data-cli="link" data-label="\([^"]*\)" href="\([^"]*\)".*/  \1: \2/p' \
-  -e 's/.*data-cli="section"&gt;\([^&lt;]*\).*/\n\x1b[33m► \1\x1b[0m/p' \
-  -e 's/.*data-cli="item"&gt;\([^&lt;]*\).*/  • \1/p' \
-  -e 's/.*data-cli="project" data-name="\([^"]*\)" data-stars="\([^"]*\)" href="\([^"]*\)".*/  \x1b[36m◆ \1 (\2★): \3\x1b[0m/p' \
-  -e 's/.*data-cli="exp" data-info="\([^"]*\)".*/  \x1b[1m▸ \1\x1b[0m/p' \
-  -e 's/.*data-cli="edu" data-info="\([^"]*\)".*/  \x1b[1m▸ \1\x1b[0m/p' \
-  -e 's/.*data-cli="blog" data-name="\([^"]*\)" href="\([^"]*\)".*/  \x1b[36m◆ \1: \2\x1b[0m/p' \
+  -e 's/.*data-cli="section"&gt;\([^&lt;]*\).*/\n\x1b[33m[\1]\x1b[0m/p' \
+  -e 's/.*data-cli="story" data-year="\([^"]*\)" data-text="\([^"]*\)".*/  \x1b[36m\1:\x1b[0m \2/p' \
+  -e 's/.*data-cli="item"&gt;\([^&lt;]*\).*/  - \1/p' \
+  -e 's/.*data-cli="project" data-name="\([^"]*\)" data-stars="\([^"]*\)" href="\([^"]*\)".*/  \x1b[36m* \1 (\2): \3\x1b[0m/p' \
+  -e 's/.*data-cli="exp" data-info="\([^"]*\)".*/  \x1b[1m&gt; \1\x1b[0m/p' \
+  -e 's/.*data-cli="edu" data-info="\([^"]*\)".*/  \x1b[1m&gt; \1\x1b[0m/p' \
+  -e 's/.*data-cli="blog" data-name="\([^"]*\)" href="\([^"]*\)".*/  \x1b[36m* \1: \2\x1b[0m/p' \
   -e 's/.*data-cli="footer"&gt;\([^&lt;]*\).*/\n\x1b[90m\1\x1b[0m/p'</code></pre>
 <pre class="cli-code" id="cli-python"><code class="language-python">import requests
 from bs4 import BeautifulSoup
@@ -327,16 +330,17 @@ soup = BeautifulSoup(requests.get("https://arman-bd.github.io").text, "html.pars
 
 for el in soup.find_all(attrs={"data-cli": True}):
     t, v = el["data-cli"], el.get_text(strip=True)
-    if t == "name": print(f"\033[32m{'═'*26}\n {v}\n{'═'*26}\033[0m")
+    if t == "name": print(f"\033[32m{'='*12}\n{v}\n{'='*12}\033[0m")
     elif t == "title": print(f"\033[36m {v}\033[0m")
-    elif t == "tagline": print(f"\033[90m {v}\033[0m")
+    elif t == "tagline": print(f"\033[90m {el.get('data-text', v)}\033[0m")
     elif t == "link": print(f"  {el['data-label']}: {el['href'].replace('mailto:','')}")
-    elif t == "section": print(f"\n\033[33m► {v}\033[0m")
-    elif t == "item": print(f"  • {v}")
-    elif t == "project": print(f"  \033[36m◆ {el['data-name']} ({el['data-stars']}★): {el['href']}\033[0m")
-    elif t == "exp": print(f"  \033[1m▸ {el['data-info']}\033[0m")
-    elif t == "edu": print(f"  \033[1m▸ {el['data-info']}\033[0m")
-    elif t == "blog": print(f"  \033[36m◆ {el['data-name']}: {el['href']}\033[0m")
+    elif t == "section": print(f"\n\033[33m[{v}]\033[0m")
+    elif t == "story": print(f"  \033[36m{el['data-year']}:\033[0m {el['data-text']}")
+    elif t == "item": print(f"  - {v}")
+    elif t == "project": print(f"  \033[36m* {el['data-name']} ({el['data-stars']}): {el['href']}\033[0m")
+    elif t == "exp": print(f"  \033[1m> {el['data-info']}\033[0m")
+    elif t == "edu": print(f"  \033[1m> {el['data-info']}\033[0m")
+    elif t == "blog": print(f"  \033[36m* {el['data-name']}: {el['href']}\033[0m")
     elif t == "footer": print(f"\n\033[90m{v}\033[0m")</code></pre>
 <pre class="cli-code" id="cli-javascript"><code class="language-javascript">const cheerio = require("cheerio");
 const https = require("https");
@@ -353,16 +357,17 @@ https.get("https://arman-bd.github.io", (res) =&gt; {
       const t = $el.attr("data-cli");
       const v = $el.text().trim();
 
-      if (t === "name") console.log(`\x1b[32m${"═".repeat(26)}\n ${v}\n${"═".repeat(26)}\x1b[0m`);
+      if (t === "name") console.log(`\x1b[32m${"=".repeat(12)}\n${v}\n${"=".repeat(12)}\x1b[0m`);
       else if (t === "title") console.log(`\x1b[36m ${v}\x1b[0m`);
-      else if (t === "tagline") console.log(`\x1b[90m ${v}\x1b[0m`);
+      else if (t === "tagline") console.log(`\x1b[90m ${$el.attr("data-text") || v}\x1b[0m`);
       else if (t === "link") console.log(`  ${$el.attr("data-label")}: ${$el.attr("href").replace("mailto:","")}`);
-      else if (t === "section") console.log(`\n\x1b[33m► ${v}\x1b[0m`);
-      else if (t === "item") console.log(`  • ${v}`);
-      else if (t === "project") console.log(`  \x1b[36m◆ ${$el.attr("data-name")} (${$el.attr("data-stars")}★): ${$el.attr("href")}\x1b[0m`);
-      else if (t === "exp") console.log(`  \x1b[1m▸ ${$el.attr("data-info")}\x1b[0m`);
-      else if (t === "edu") console.log(`  \x1b[1m▸ ${$el.attr("data-info")}\x1b[0m`);
-      else if (t === "blog") console.log(`  \x1b[36m◆ ${$el.attr("data-name")}: ${$el.attr("href")}\x1b[0m`);
+      else if (t === "section") console.log(`\n\x1b[33m[${v}]\x1b[0m`);
+      else if (t === "story") console.log(`  \x1b[36m${$el.attr("data-year")}:\x1b[0m ${$el.attr("data-text")}`);
+      else if (t === "item") console.log(`  - ${v}`);
+      else if (t === "project") console.log(`  \x1b[36m* ${$el.attr("data-name")} (${$el.attr("data-stars")}): ${$el.attr("href")}\x1b[0m`);
+      else if (t === "exp") console.log(`  \x1b[1m> ${$el.attr("data-info")}\x1b[0m`);
+      else if (t === "edu") console.log(`  \x1b[1m> ${$el.attr("data-info")}\x1b[0m`);
+      else if (t === "blog") console.log(`  \x1b[36m* ${$el.attr("data-name")}: ${$el.attr("href")}\x1b[0m`);
       else if (t === "footer") console.log(`\n\x1b[90m${v}\x1b[0m`);
     });
   });
@@ -378,16 +383,17 @@ doc.css("[data-cli]").each do |el|
   v = el.text.strip
 
   case t
-  when "name" then puts "\e[32m#{"═" * 26}\n #{v}\n#{"═" * 26}\e[0m"
+  when "name" then puts "\e[32m#{"=" * 12}\n#{v}\n#{"=" * 12}\e[0m"
   when "title" then puts "\e[36m #{v}\e[0m"
-  when "tagline" then puts "\e[90m #{v}\e[0m"
+  when "tagline" then puts "\e[90m #{el["data-text"] || v}\e[0m"
   when "link" then puts "  #{el["data-label"]}: #{el["href"].sub("mailto:", "")}"
-  when "section" then puts "\n\e[33m► #{v}\e[0m"
-  when "item" then puts "  • #{v}"
-  when "project" then puts "  \e[36m◆ #{el["data-name"]} (#{el["data-stars"]}★): #{el["href"]}\e[0m"
-  when "exp" then puts "  \e[1m▸ #{el["data-info"]}\e[0m"
-  when "edu" then puts "  \e[1m▸ #{el["data-info"]}\e[0m"
-  when "blog" then puts "  \e[36m◆ #{el["data-name"]}: #{el["href"]}\e[0m"
+  when "section" then puts "\n\e[33m[#{v}]\e[0m"
+  when "story" then puts "  \e[36m#{el["data-year"]}:\e[0m #{el["data-text"]}"
+  when "item" then puts "  - #{v}"
+  when "project" then puts "  \e[36m* #{el["data-name"]} (#{el["data-stars"]}): #{el["href"]}\e[0m"
+  when "exp" then puts "  \e[1m> #{el["data-info"]}\e[0m"
+  when "edu" then puts "  \e[1m> #{el["data-info"]}\e[0m"
+  when "blog" then puts "  \e[36m* #{el["data-name"]}: #{el["href"]}\e[0m"
   when "footer" then puts "\n\e[90m#{v}\e[0m"
   end
 end</code></pre>
@@ -444,13 +450,15 @@ setTimeout(()=>btn.textContent='Copy',2000);
     const lang=block.className.replace('language-','');
     const code=block.textContent;
     const tokens=[];
-    const re=/(#[^\n]*|\/\/[^\n]*|"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`|-[a-zA-Z]+|\b\d+\b|\b[a-zA-Z_][a-zA-Z0-9_]*\b|[^\s]|\s+)/g;
+    const re=/(https?:\/\/[^\s"']+|#[^\n]*|\/\/[^\n]*|"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`|-[a-zA-Z]+|\b\d+\b|\b[a-zA-Z_][a-zA-Z0-9_]*\b|\\x1b\[[0-9;]*m|[^\s]|\s+)/g;
     let m;
     while((m=re.exec(code))!==null){
       const t=m[0];
-      if((lang==='python'||lang==='ruby'||lang==='bash')&&t.startsWith('#'))tokens.push(w(e(t),'comment'));
+      if(/^https?:\/\//.test(t))tokens.push(w(e(t),'string'));
+      else if((lang==='python'||lang==='ruby'||lang==='bash')&&t.startsWith('#'))tokens.push(w(e(t),'comment'));
       else if(t.startsWith('//'))tokens.push(w(e(t),'comment'));
       else if(t.startsWith('"')||t.startsWith("'")||t.startsWith('`'))tokens.push(w(e(t),'string'));
+      else if(/^\\x1b\[/.test(t))tokens.push(w(e(t),'escape'));
       else if(lang==='bash'&&/^-[a-zA-Z]+$/.test(t))tokens.push(w(e(t),'flag'));
       else if(lang==='bash'&&new RegExp('^('+cmd+')$').test(t))tokens.push(w(e(t),'command'));
       else if(/^\d+$/.test(t))tokens.push(w(e(t),'number'));
