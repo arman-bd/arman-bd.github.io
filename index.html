@@ -239,61 +239,68 @@ section{padding:25px 15px}
 <button class="cli-tab" data-lang="javascript">JavaScript</button>
 <button class="cli-tab" data-lang="ruby">Ruby</button>
 </div>
-<pre class="cli-code active" id="cli-bash"><code>curl -s https://arman-bd.github.io | grep 'data-cli' | sed -n \
-  -e 's/.*data-cli="name">\([^&lt;]*\).*/\x1b[32m══════════════════════════\n \1\n══════════════════════════\x1b[0m/p' \
-  -e 's/.*data-cli="title">\([^&lt;]*\).*/\x1b[36m \1\x1b[0m/p' \
-  -e 's/.*data-cli="tagline">\([^&lt;]*\).*/\x1b[90m \1\x1b[0m/p' \
+<pre class="cli-code active" id="cli-bash"><code>curl -s https://arman-bd.github.io | sed '/<pre/,/<\/pre>/d' | grep 'data-cli=' | sed -n \
+  -e 's/.*data-cli="name">\([^<]*\).*/\x1b[32m══════════════════════════\n \1\n══════════════════════════\x1b[0m/p' \
+  -e 's/.*data-cli="title">\([^<]*\).*/\x1b[36m \1\x1b[0m/p' \
+  -e 's/.*data-cli="tagline">\([^<]*\).*/\x1b[90m \1\x1b[0m/p' \
   -e 's/.*data-cli="link" data-label="\([^"]*\)" href="mailto:\([^"]*\)".*/  \1: \2/p' \
   -e 's/.*data-cli="link" data-label="\([^"]*\)" href="\([^"]*\)".*/  \1: \2/p' \
-  -e 's/.*data-cli="section">\([^&lt;]*\).*/\n\x1b[33m► \1\x1b[0m/p' \
-  -e 's/.*data-cli="item">\([^&lt;]*\).*/  • \1/p' \
+  -e 's/.*data-cli="section">\([^<]*\).*/\n\x1b[33m► \1\x1b[0m/p' \
+  -e 's/.*data-cli="item">\([^<]*\).*/  • \1/p' \
   -e 's/.*data-cli="project" data-name="\([^"]*\)" data-stars="\([^"]*\)" href="\([^"]*\)".*/  \x1b[36m◆ \1 (\2★): \3\x1b[0m/p' \
   -e 's/.*data-cli="exp" data-info="\([^"]*\)".*/  \x1b[1m▸ \1\x1b[0m/p' \
   -e 's/.*data-cli="edu" data-info="\([^"]*\)".*/  \x1b[1m▸ \1\x1b[0m/p' \
   -e 's/.*data-cli="blog" data-name="\([^"]*\)" href="\([^"]*\)".*/  \x1b[36m◆ \1: \2\x1b[0m/p' \
-  -e 's/.*data-cli="footer">\([^&lt;]*\).*/\n\x1b[90m\1\x1b[0m/p'</code></pre>
+  -e 's/.*data-cli="footer">\([^<]*\).*/\n\x1b[90m\1\x1b[0m/p'</code></pre>
 <pre class="cli-code" id="cli-python"><code>import re, requests
 
 html = requests.get("https://arman-bd.github.io").text
-patterns = {
-    "name": (r'data-cli="name">([^&lt;]+)', "\033[32m{'═'*26}\n {}\n{'═'*26}\033[0m"),
-    "title": (r'data-cli="title">([^&lt;]+)', "\033[36m {}\033[0m"),
-    "tagline": (r'data-cli="tagline">([^&lt;]+)', "\033[90m {}\033[0m"),
-    "link_email": (r'data-cli="link" data-label="([^"]+)" href="mailto:([^"]+)"', "  {}: {}"),
-    "link": (r'data-cli="link" data-label="([^"]+)" href="([^"]+)"', "  {}: {}"),
-    "section": (r'data-cli="section">([^&lt;]+)', "\n\033[33m► {}\033[0m"),
-    "item": (r'data-cli="item">([^&lt;]+)', "  • {}"),
-    "project": (r'data-cli="project" data-name="([^"]+)" data-stars="([^"]+)" href="([^"]+)"', "  \033[36m◆ {} ({}★): {}\033[0m"),
-    "exp": (r'data-cli="exp" data-info="([^"]+)"', "  \033[1m▸ {}\033[0m"),
-    "edu": (r'data-cli="edu" data-info="([^"]+)"', "  \033[1m▸ {}\033[0m"),
-    "blog": (r'data-cli="blog" data-name="([^"]+)" href="([^"]+)"', "  \033[36m◆ {}: {}\033[0m"),
-}
+html = re.sub(r'&lt;pre[^&gt;]*&gt;.*?&lt;/pre&gt;', '', html, flags=re.DOTALL)
 
-for key, (pattern, fmt) in patterns.items():
-    for match in re.findall(pattern, html):
-        print(fmt.format(*match) if isinstance(match, tuple) else fmt.format(match))</code></pre>
+patterns = [
+    (r'data-cli="name"&gt;([^&lt;]+)', "\033[32m══════════════════════════\n {}\n══════════════════════════\033[0m"),
+    (r'data-cli="title"&gt;([^&lt;]+)', "\033[36m {}\033[0m"),
+    (r'data-cli="tagline"&gt;([^&lt;]+)', "\033[90m {}\033[0m"),
+    (r'data-cli="link" data-label="([^"]+)" href="mailto:([^"]+)"', "  {}: {}"),
+    (r'data-cli="link" data-label="([^"]+)" href="(?!mailto:)([^"]+)"', "  {}: {}"),
+    (r'data-cli="section"&gt;([^&lt;]+)', "\n\033[33m► {}\033[0m"),
+    (r'data-cli="item"&gt;([^&lt;]+)', "  • {}"),
+    (r'data-cli="project" data-name="([^"]+)" data-stars="([^"]+)" href="([^"]+)"', "  \033[36m◆ {} ({}★): {}\033[0m"),
+    (r'data-cli="exp" data-info="([^"]+)"', "  \033[1m▸ {}\033[0m"),
+    (r'data-cli="edu" data-info="([^"]+)"', "  \033[1m▸ {}\033[0m"),
+    (r'data-cli="blog" data-name="([^"]+)" href="([^"]+)"', "  \033[36m◆ {}: {}\033[0m"),
+    (r'data-cli="footer"&gt;([^&lt;]+)', "\n\033[90m{}\033[0m"),
+]
+
+for pattern, fmt in patterns:
+    for m in re.findall(pattern, html):
+        print(fmt.format(*m) if isinstance(m, tuple) else fmt.format(m))</code></pre>
 <pre class="cli-code" id="cli-javascript"><code>const https = require('https');
 
-https.get('https://arman-bd.github.io', (res) => {
+https.get('https://arman-bd.github.io', (res) =&gt; {
   let html = '';
-  res.on('data', chunk => html += chunk);
-  res.on('end', () => {
+  res.on('data', chunk =&gt; html += chunk);
+  res.on('end', () =&gt; {
+    html = html.replace(/&lt;pre[^&gt;]*&gt;[\s\S]*?&lt;\/pre&gt;/g, '');
     const patterns = [
-      [/data-cli="name">([^&lt;]+)/g, '\x1b[32m══════════════════════════\n $1\n══════════════════════════\x1b[0m'],
-      [/data-cli="title">([^&lt;]+)/g, '\x1b[36m $1\x1b[0m'],
-      [/data-cli="tagline">([^&lt;]+)/g, '\x1b[90m $1\x1b[0m'],
+      [/data-cli="name"&gt;([^&lt;]+)/g, '\x1b[32m══════════════════════════\n $1\n══════════════════════════\x1b[0m'],
+      [/data-cli="title"&gt;([^&lt;]+)/g, '\x1b[36m $1\x1b[0m'],
+      [/data-cli="tagline"&gt;([^&lt;]+)/g, '\x1b[90m $1\x1b[0m'],
       [/data-cli="link" data-label="([^"]+)" href="mailto:([^"]+)"/g, '  $1: $2'],
-      [/data-cli="link" data-label="([^"]+)" href="([^"]+)"/g, '  $1: $2'],
-      [/data-cli="section">([^&lt;]+)/g, '\n\x1b[33m► $1\x1b[0m'],
-      [/data-cli="item">([^&lt;]+)/g, '  • $1'],
+      [/data-cli="link" data-label="([^"]+)" href="(?!mailto:)([^"]+)"/g, '  $1: $2'],
+      [/data-cli="section"&gt;([^&lt;]+)/g, '\n\x1b[33m► $1\x1b[0m'],
+      [/data-cli="item"&gt;([^&lt;]+)/g, '  • $1'],
       [/data-cli="project" data-name="([^"]+)" data-stars="([^"]+)" href="([^"]+)"/g, '  \x1b[36m◆ $1 ($2★): $3\x1b[0m'],
       [/data-cli="exp" data-info="([^"]+)"/g, '  \x1b[1m▸ $1\x1b[0m'],
       [/data-cli="edu" data-info="([^"]+)"/g, '  \x1b[1m▸ $1\x1b[0m'],
       [/data-cli="blog" data-name="([^"]+)" href="([^"]+)"/g, '  \x1b[36m◆ $1: $2\x1b[0m'],
+      [/data-cli="footer"&gt;([^&lt;]+)/g, '\n\x1b[90m$1\x1b[0m'],
     ];
-    patterns.forEach(([regex, fmt]) => {
+    patterns.forEach(([regex, fmt]) =&gt; {
       let match; while ((match = regex.exec(html)) !== null) {
-        console.log(fmt.replace(/\$(\d)/g, (_, n) => match[n]));
+        let out = fmt;
+        for (let i = 1; i &lt; match.length; i++) out = out.replace('$' + i, match[i]);
+        console.log(out);
       }
     });
   });
@@ -301,23 +308,24 @@ https.get('https://arman-bd.github.io', (res) => {
 <pre class="cli-code" id="cli-ruby"><code>require 'net/http'
 
 html = Net::HTTP.get(URI('https://arman-bd.github.io'))
-patterns = {
-  /data-cli="name">([^<]+)/ => "\e[32m#{'═'*26}\n %s\n#{'═'*26}\e[0m",
-  /data-cli="title">([^<]+)/ => "\e[36m %s\e[0m",
-  /data-cli="tagline">([^<]+)/ => "\e[90m %s\e[0m",
-  /data-cli="link" data-label="([^"]+)" href="mailto:([^"]+)"/ => "  %s: %s",
-  /data-cli="link" data-label="([^"]+)" href="([^"]+)"/ => "  %s: %s",
-  /data-cli="section">([^<]+)/ => "\n\e[33m► %s\e[0m",
-  /data-cli="item">([^<]+)/ => "  • %s",
-  /data-cli="project" data-name="([^"]+)" data-stars="([^"]+)" href="([^"]+)"/ => "  \e[36m◆ %s (%s★): %s\e[0m",
-  /data-cli="exp" data-info="([^"]+)"/ => "  \e[1m▸ %s\e[0m",
-  /data-cli="edu" data-info="([^"]+)"/ => "  \e[1m▸ %s\e[0m",
-  /data-cli="blog" data-name="([^"]+)" href="([^"]+)"/ => "  \e[36m◆ %s: %s\e[0m",
-}
+html = html.gsub(/&lt;pre[^&gt;]*&gt;.*?&lt;\/pre&gt;/m, '')
 
-patterns.each do |pattern, fmt|
-  html.scan(pattern) { |m| puts fmt % m }
-end</code></pre>
+patterns = [
+  [/data-cli="name"&gt;([^&lt;]+)/, "\e[32m#{'═'*26}\n %s\n#{'═'*26}\e[0m"],
+  [/data-cli="title"&gt;([^&lt;]+)/, "\e[36m %s\e[0m"],
+  [/data-cli="tagline"&gt;([^&lt;]+)/, "\e[90m %s\e[0m"],
+  [/data-cli="link" data-label="([^"]+)" href="mailto:([^"]+)"/, "  %s: %s"],
+  [/data-cli="link" data-label="([^"]+)" href="(?!mailto:)([^"]+)"/, "  %s: %s"],
+  [/data-cli="section"&gt;([^&lt;]+)/, "\n\e[33m► %s\e[0m"],
+  [/data-cli="item"&gt;([^&lt;]+)/, "  • %s"],
+  [/data-cli="project" data-name="([^"]+)" data-stars="([^"]+)" href="([^"]+)"/, "  \e[36m◆ %s (%s★): %s\e[0m"],
+  [/data-cli="exp" data-info="([^"]+)"/, "  \e[1m▸ %s\e[0m"],
+  [/data-cli="edu" data-info="([^"]+)"/, "  \e[1m▸ %s\e[0m"],
+  [/data-cli="blog" data-name="([^"]+)" href="([^"]+)"/, "  \e[36m◆ %s: %s\e[0m"],
+  [/data-cli="footer"&gt;([^&lt;]+)/, "\n\e[90m%s\e[0m"],
+]
+
+patterns.each { |p, f| html.scan(p) { |m| puts f % m } }</code></pre>
 </div>
 </section>
 
