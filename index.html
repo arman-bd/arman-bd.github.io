@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4ac04526-55c2-48ae-8949-5cd65181fe07" data-blockingmode="auto" type="text/javascript"></script>
 <title>Arman Hossain - Web Scraping & Data Extraction Specialist</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -474,9 +473,20 @@ setTimeout(()=>btn.textContent='Copy',2000);
 })();
 </script>
 
-<!-- Analytics (loaded after page) -->
+<!-- Deferred Scripts: Cookiebot at 1s, Analytics at 2s -->
 <script>
-window.addEventListener('load', function() {
+// Cookiebot - load after 1 second
+setTimeout(function() {
+  var cb = document.createElement('script');
+  cb.id = 'Cookiebot';
+  cb.src = 'https://consent.cookiebot.com/uc.js';
+  cb.setAttribute('data-cbid', '4ac04526-55c2-48ae-8949-5cd65181fe07');
+  cb.setAttribute('data-blockingmode', 'auto');
+  document.head.appendChild(cb);
+}, 1000);
+
+// Analytics - load after 2 seconds
+setTimeout(function() {
   // Google Analytics
   var ga = document.createElement('script');
   ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-E0N9Z2NBY7';
@@ -503,7 +513,7 @@ window.addEventListener('load', function() {
     api_host: 'https://us.i.posthog.com',
     person_profiles: 'always'
   });
-});
+}, 3000);
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1153720160308020&ev=PageView&noscript=1"/></noscript>
 
