@@ -72,7 +72,7 @@ h2{font-size:1.3rem;margin-bottom:24px;padding-bottom:8px;border-bottom:2px soli
 .cli-dots span:nth-child(2){background:#ffbd2e}
 .cli-dots span:nth-child(3){background:#27ca40}
 .cli-title{flex:1;text-align:center;font-size:0.75rem;color:var(--muted)}
-.cli-copy{background:var(--accent);color:#000;border:none;padding:6px 14px;border-radius:5px;font-size:0.7rem;cursor:pointer;transition:all .2s;font-weight:600}
+.cli-copy{background:var(--accent);color:#fff;border:none;padding:6px 14px;border-radius:5px;font-size:0.7rem;cursor:pointer;transition:all .2s;font-weight:600}
 .cli-copy:hover{opacity:0.85;transform:scale(1.02)}
 .cli-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--card)}
 .cli-tab{padding:12px 22px;font-size:0.8rem;color:var(--muted);cursor:pointer;border:none;background:transparent;transition:all .2s;border-bottom:2px solid transparent}
@@ -405,7 +405,6 @@ localStorage.setItem('theme',current==='light'?'dark':'light');
 (function(){
 const saved=localStorage.getItem('theme');
 if(saved)document.documentElement.setAttribute('data-theme',saved);
-else if(window.matchMedia('(prefers-color-scheme:light)').matches)document.documentElement.setAttribute('data-theme','light');
 })();
 
 // Tab switching
