@@ -481,9 +481,8 @@ setTimeout(()=>btn.textContent='Copy',2000);
 })();
 </script>
 
-<!-- Deferred Scripts: Cookiebot at 1s, Analytics at 2s -->
+<!-- Cookiebot - load after 1 second -->
 <script>
-// Cookiebot - load after 1 second
 setTimeout(function() {
   var cb = document.createElement('script');
   cb.id = 'Cookiebot';
@@ -491,10 +490,13 @@ setTimeout(function() {
   cb.setAttribute('data-cbid', '4ac04526-55c2-48ae-8949-5cd65181fe07');
   cb.setAttribute('data-blockingmode', 'auto');
   document.head.appendChild(cb);
-}, 1000);
+}, 500);
 
-// Analytics - load after 2 seconds
-setTimeout(function() {
+// Load analytics only after consent
+function loadAnalytics() {
+  if (window._analyticsLoaded) return;
+  window._analyticsLoaded = true;
+
   // Google Analytics
   var ga = document.createElement('script');
   ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-E0N9Z2NBY7';
@@ -521,7 +523,17 @@ setTimeout(function() {
     api_host: 'https://us.i.posthog.com',
     person_profiles: 'always'
   });
-}, 3000);
+}
+
+// Listen for Cookiebot consent
+window.addEventListener('CookiebotOnAccept', function() {
+  if (Cookiebot.consent.statistics) loadAnalytics();
+});
+
+// Check if consent was already given or not required
+window.addEventListener('CookiebotOnLoad', function() {
+  if (!Cookiebot.regulations.gdprApplies || Cookiebot.consent.statistics) loadAnalytics();
+});
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1153720160308020&ev=PageView&noscript=1"/></noscript>
 
